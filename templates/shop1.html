@@ -1,0 +1,87 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block title_page %}
+    <title xmlns:text-align="http://www.w3.org/1999/xhtml">Магазин</title>
+{% endblock %}
+{% block content %}
+    <div style=" background-color: #CEF6CE">
+        <section id="portfolio" class="portfolio">
+            <li class="container">
+
+                <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+                    <h2>Результаты поиска</h2>
+                    <p>Наши клиенты - это небольшие авторемонтные мастерские и конечные потребители. Также крупные сети
+                        авторизованных сервисных и официальных импортеров автомобилей, ведущих дистрибьюторов
+                        автозапчастей и авторизованных сервис центров известных производителей дизельных систем.
+                        Внедрение наших продуктов поддерживает рост наших клиентов на рынке афтермаркета.
+                    </p>
+                </div>
+
+                <form class="form-inline pb-4 mb-1" role="search" action="{% url 'search' %}" method="get">
+                    <h3>Пример ввода номера форсунки: </h3>
+                    <div class="col-auto mb-2">
+                        <label for="inlineFormInput"></label><input type="search" class="form-control form-control-lg" id="inlineFormInput" name="q"
+                                                                    placeholder="0445110520">
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-2 btn-lg ">Поиск</button>
+                    <a href="{% url 'shop' %}" class="btn btn-warning btn-lg mb-2 ml-3">Вернуться в магазин</a>
+
+
+                </form>
+
+
+                <div class="row portfolio-container" data-aos="fade-up">
+
+                    {% for post in object_list %}
+                        {% if post.active %}
+                        <div class="col-lg-4 col-md-6  portfolio-item filter-bosch">
+                            <div class="card">
+                                <div class="view overlay">
+                                    <a href="{{ post.get_absolute_url }}">
+                                        <img src="{{ post.image.url }}"
+                                             class="card-img-top"
+                                             alt=""></a>
+
+                                    <div class="mask rgba-white-slight"></div>
+                                </div>
+                                <div class="card-body text-center">
+                                    <a href="" class="grey-text">
+                                        <h5>{{ post.name }}</h5>
+                                    </a>
+                                    <h4>
+
+                                            <a href="" class="dark-grey-text">{{ post.number }}</a>
+
+                                    </h4>
+
+                                    <h4 class="font-weight-bold blue-text">
+                                        <strong>{{ post.price }}$</strong>
+                                    </h4>
+                                          <div style=" text-align:center">
+                                          <a href="{% url 'add_to_cart' post.slug %}"
+                                            class="good-item__btn-add btn btn-success btn-lg js-add-to-cart "
+                                                data-id="" data-name="" data-price="">Добавить в корзину
+                                            <i class="fas fa-shopping-cart ml-1"></i>
+                                          </a>
+
+                                    </div>
+
+                                </div>
+
+                                <!--Card content-->
+
+                            </div>
+                            <!--Card-->
+
+                        </div>
+                        {% endif %}
+
+                    {% endfor %}
+
+                </div>
+
+
+            </li>
+        </section>
+    </div>
+{% endblock content %}

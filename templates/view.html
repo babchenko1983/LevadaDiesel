@@ -1,0 +1,237 @@
+
+{% load static %}
+{% if empty %}
+
+<div style=" background-color: #ECF6CE">
+
+    <h1 style="text-align: center">{{ empty_message }}</h1>
+
+
+    <td><a href="{% url 'shop' %}" class="btn btn-warning btn-lg mb-2 ml-3"><i class="fa fa-angle-left"></i><h3>Вернуться в магазин</h3></a></td>
+
+
+</div>
+{% else %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Material Design Bootstrap</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'css/bootstrap.min.css'%}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+<body>
+<div style=" background-color: #CEF6CE">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+    <div class="container">
+
+      <!-- Brand -->
+      <a class="navbar-brand waves-effect" href="{% url 'home' %}" target="_blank">
+        <strong class="blue-text">Levada Diesel Service</strong>
+      </a>
+
+      <!-- Collapse -->
+
+      <!-- Links -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <!-- Left -->
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link waves-effect" href=" {%  url 'home'%}">На главную
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link waves-effect" href="{% url 'shop' %}">Вернуться к поиску
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+
+        </ul>
+
+        <!-- Right -->
+        <ul class="navbar-nav nav-flex-icons">
+          <li class="nav-item">
+            <a href="{% url 'cart' %}"class="nav-link waves-effect">
+              <span class="badge red z-depth-1 mr-1">{{request.session.items_total}} </span>
+              <i class="fas fa-shopping-cart"></i>
+              <span class="clearfix d-none d-sm-inline-block"> Корзина </span>
+
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+
+</nav>
+
+
+<div style=" background-color: #ECF6CE">
+    <div style="text-align:center">
+        <h2>КОРЗИНА
+        </h2>
+    </div>
+    <div class="container">
+        <div>
+
+            <table id="cart" class="table table-hover table-condensed  ">
+                <thead>
+                <tr>
+                    <th style="width:70%"class="text-center">Название продукта</th>
+                    <th style="width:10%"class="text-center">Цена</th>
+                    <th style="width:10%"class="text-center">Кол-во</th>
+                    <th style="width:18%" class="text-center"></th>
+                    <th style="width:0%">Удалить</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                {% for i in cart.cartitem_set.all %}
+
+                    <tr>
+                        <td data-th="Product">
+                            <div class="row">
+                                <div class="col-sm-6 hidden-xs"><img src="{{ i.product.image.url }}" alt="..."
+                                                                     class="img-responsive"/></div>
+                                <div class="col-sm-5">
+                                    <h4 class="nomargin">{{ i.product.name }} {{ i.product.number }}</h4>
+                                    <p>{{ i.product.description}}</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td data-th="Price" class="text-center"><h4>{{ i.product.price }} $</h4></td>
+                        <td data-th="Quantity" class="text-center"><h4>{{ i.quantity }} шт.</h4></td>
+
+
+                        <td data-th="Subtotal" class="text-center"></td>
+
+                        <td class="actions" data-th="" >
+                            <button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
+                            <a class="btn btn-danger btn-sm" href="{% url 'remove_from_cart' i.id %}"><i
+                                    class="fa fa-trash-o"></i></a>
+                        </td>
+                    </tr>
+                    </tbody>
+                {% endfor %}
+
+{#                <tfoot>#}
+{##}
+{#                <tr>#}
+{#                    <td><a href="{% url 'shop' %}" class="btn btn-warning btn-lg mb-2 ml-3">Вернуться в магазин</a></td>#}
+{#                    <td colspan="2" class="hidden-xs"></td>#}
+{#                    <td class="hidden-xs text-center"><strong><h4>Итого: {{ cart.total }} $</h4></strong></td>#}
+{#                    <td>#}
+{#                        <a href="{% url 'checkout' %}}">Checkout <i class="fa fa-angle-right"></i></a></td>#}
+{#                </tr>#}
+{#                </tfoot>#}
+{#            #}
+
+            <tfoot>
+						<tr class="visible-xs">
+							<td class="text-center"><strong>Total 1.99</strong></td>
+						</tr>
+						<tr>
+							<td><a href="{% url 'shop' %}" class="btn btn-warning btn-lg mb-2 ml-3"><i class="fa fa-angle-left"></i> Вернуться в магазин</a></td>
+							<td colspan="2" class="hidden-xs"></td>
+							<td class="hidden-xs text-center"><strong><h3>Итого: {{ cart.total }} $</h3></strong></td>
+{#							<#}
+						<td><button onclick="location.href=button.getUrl()" class="btn btn-success btn-lg btn-block">Оплата</button></td>
+                        </tr>
+                        
+					</tfoot>
+            </table>
+
+
+        </div>
+        <script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+        <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+        <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+        <script src="{% static 'assets/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+        <script src="{% static 'assets/vendor/counterup/counterup.min.js' %}"></script>
+        <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+        <script src="{% static 'assets/vendor/venobox/venobox.min.js' %}"></script>
+        <script src="{% static 'assets/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+
+        <!-- Template Main JS File -->
+        <script src="{% static 'assets/js/main.js' %}"></script>
+
+        <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+    </div>
+</div>
+  <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js'%}"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="{% static 'js/popper.min.js'%}"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="{% static 'js/bootstrap.min.js'%}"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="{% static 'js/mdb.min.js'%}"></script>
+  <!-- Initializations -->
+  <script type="text/javascript">
+    // Animations initialization
+    new WOW().init();</script>
+  <script src="https://api.fondy.eu/static_common/v1/checkout/ipsp.js"></script>
+<script>
+	var button = $ipsp.get('button');
+	button.setMerchantId(1396424);
+	button.setAmount({{ cart.total }}, 'USD', true);
+	button.setResponseUrl('http://example.com/result/');
+	button.setHost('api.fondy.eu');
+	button.addField({
+		label: 'ФИО',
+		name: 'fio',
+		required: true
+	});
+	button.addField({
+		label: 'Описание платежа',
+		name: 'description',
+        required: true
+
+	});
+		button.addField({
+		label: 'Описание платежа',
+		name: 'description',
+        required: true
+
+	});
+			button.addField({
+		label: 'Описание платежа',
+		name: 'description',
+        required: true
+
+	});
+</script>
+
+</div>
+</body>
+</html>
+{% endif %}
+
