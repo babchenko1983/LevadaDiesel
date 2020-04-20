@@ -17,6 +17,7 @@ def checkout(request):
     except:
         the_id = None
         return HttpResponseRedirect(reverse("cart"))
+    
     new_order, created = Order.objects.get_or_create(cart=cart)
     if created:
         new_order.order_id=id_generator()
@@ -28,6 +29,7 @@ def checkout(request):
         del request.session['cart_id']
         del request.session['items_total']
         return HttpResponseRedirect(reverse("cart"))
+    print()
 
     context = {}
     return render(request, 'checkout.html', context)
