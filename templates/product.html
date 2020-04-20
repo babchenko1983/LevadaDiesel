@@ -119,8 +119,7 @@
               <h3>Цена: {{ product.price }} EUR.</h3>
               </p>
 
-
-
+              <h4>Всего в наличии: {{product.stock}}шт.</h4>
             <form class="d-flex justify-content-left" method="GET" action="{% url 'add_to_cart' product.slug %}">
               <!-- Default input -->
               <input type="number" name="qty" value="1" aria-label="Search" class="form-control" style="width: 100px">

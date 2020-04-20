@@ -25,6 +25,13 @@ class ItemDetailView(View):
 
 def shop(request):
     product = Product.objects.all()
+    for i in product:
+        if i.stock == 0:
+            i.active=False
+            i.save()
+        else:
+            i.active=True
+            i.save()
     context = {
         'pr': product
     }

@@ -6,12 +6,14 @@ from web.models import Product
 
 
 def view(request):
+
     try:
         the_id = request.session['cart_id']
         cart = Cart.objects.get(id=the_id)
     except:
         the_id = None
     if the_id:
+        print("ok")
         new_total = 0.00
         for item in cart.cartitem_set.all():
             line_total = float(item.product.price) * item.quantity
@@ -30,7 +32,7 @@ def view(request):
 
 
 def add_to_cart(request, slug):
-    request.session.set_expiry(100000)
+    request.session.set_expiry(20000)
 
     try:
         the_id = request.session['cart_id']
@@ -44,7 +46,6 @@ def add_to_cart(request, slug):
     product = None
     try:
         product = Product.objects.get(slug=slug)
-        print(product)
     except Product.DoesNotExist:
         pass
     except:
@@ -52,22 +53,31 @@ def add_to_cart(request, slug):
     try:
         qty = request.GET.get('qty')
         update_qty = True
+
     except:
-        qty = None
+        qty = 0
         update_qty = False
-    cart_item = CartItem.objects.create(cart=cart, product=product)
-    print(cart_item)
-    if update_qty and qty:
-        if int(qty) == 0:
-            cart_item.delete()
+
+    if int(qty) <= product.stock:
+        product.stock -= int(qty)
+        product.save()
+
+        cart_item = CartItem.objects.create(cart=cart, product=product)
+        if update_qty and qty:
+            if int(qty) == 0:
+                cart_item.delete()
+            else:
+                cart_item.quantity = qty
+
+                cart_item.save()
+
         else:
-            cart_item.quantity = qty
-            cart_item.save()
+            pass
 
+        return HttpResponseRedirect(reverse("cart"))
     else:
-        pass
 
-    return HttpResponseRedirect(reverse("cart"))
+        return HttpResponseRedirect(reverse("cart"))
 
 
 def remove_from_cart(request, id):
@@ -76,10 +86,12 @@ def remove_from_cart(request, id):
         cart = Cart.objects.get(id=the_id)
     except:
         return HttpResponseRedirect(reverse("cart"))
-
     cartitem = CartItem.objects.get(id=id)
+
+    cartitem.product.stock += cartitem.quantity
+    cartitem.product.save()
+
     cartitem.cart = None
     cartitem.save()
-    # cartitem.delete()
-    #
+    cartitem.delete()
     return HttpResponseRedirect(reverse("cart"))

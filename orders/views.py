@@ -1,35 +1,39 @@
-import time
-from django.shortcuts import render, HttpResponseRedirect
-from django.urls import reverse
-from carts.models import Cart
-from .models import Order
-from .utils import id_generator
+from django.shortcuts import render
+from .models import OrderItem
+from .forms import OrderCreateForm
+from carts.views import Cart
 
-def orders(request):
-    context={}
-    return render(request, 'checkout.html', context)
 
-def checkout(request):
+def order_create(request):
+    the_id = request.session['cart_id']
+    cart = Cart.objects.get(id=the_id)
 
-    try:
-        the_id = request.session['cart_id']
-        cart = Cart.objects.get(id=the_id)
-    except:
-        the_id = None
-        return HttpResponseRedirect(reverse("cart"))
-    
-    new_order, created = Order.objects.get_or_create(cart=cart)
-    if created:
-        new_order.order_id=id_generator()
-        new_order.save()
-    # new_order.user=request.user
-    # new_order.save()
-    if new_order.status=='Finished':
-        cart.delete()
-        del request.session['cart_id']
-        del request.session['items_total']
-        return HttpResponseRedirect(reverse("cart"))
-    print()
+    if request.method == 'POST':
+        form = OrderCreateForm(request.POST)
+        if form.is_valid():
+            print('ok')
+            order = form.save()
+            for item in cart.cartitem_set.all():
+                print(item.cart.total)
+                OrderItem.objects.create(order=order,
+                                         product=item.product,
+                                         number=item.product.number,
+                                         quantity=item.quantity,
+                                         total_price=cart.total)
 
-    context = {}
-    return render(request, 'checkout.html', context)
+
+                # cart.delete()
+            # # очистка корзины
+
+            return render(request, 'order.html',
+                          {'order': order,
+                           'cart': cart}
+
+                          )
+
+
+    else:
+        print('no')
+        form = OrderCreateForm
+        return render(request, 'checkout.html',
+                      {'cart': cart, 'form': form})
