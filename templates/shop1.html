@@ -58,7 +58,7 @@
                                         <strong>{{ post.price }}$</strong>
                                     </h4>
                                           <div style=" text-align:center">
-                                          <a href="{% url 'add_to_cart' post.slug %}"
+                                          <a href="{{ post.get_absolute_url }}"
                                             class="good-item__btn-add btn btn-success btn-lg js-add-to-cart "
                                                 data-id="" data-name="" data-price="">Добавить в корзину
                                             <i class="fas fa-shopping-cart ml-1"></i>

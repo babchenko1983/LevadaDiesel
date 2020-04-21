@@ -9,6 +9,7 @@ def order_create(request):
     cart = Cart.objects.get(id=the_id)
 
     if request.method == 'POST':
+        print(request.POST)
         form = OrderCreateForm(request.POST)
         if form.is_valid():
             print('ok')
@@ -25,9 +26,9 @@ def order_create(request):
                 # cart.delete()
             # # очистка корзины
 
-            return render(request, 'order.html',
+        return render(request, 'order.html',
                           {'order': order,
-                           'cart': cart}
+                          'cart': cart}
 
                           )
 
