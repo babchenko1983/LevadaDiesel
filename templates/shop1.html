@@ -1,7 +1,8 @@
 {% extends 'main.html' %}
 {% load static %}
+{% load i18n %}
 {% block title_page %}
-    <title xmlns:text-align="http://www.w3.org/1999/xhtml">Магазин</title>
+    <title xmlns:text-align="http://www.w3.org/1999/xhtml">{% trans 'Магазин'%}</title>
 {% endblock %}
 {% block content %}
     <div style=" background-color: #CEF6CE">
@@ -9,22 +10,19 @@
             <li class="container">
 
                 <div class="section-title" data-aos="fade-in" data-aos-delay="100">
-                    <h2>Результаты поиска</h2>
-                    <p>Наши клиенты - это небольшие авторемонтные мастерские и конечные потребители. Также крупные сети
-                        авторизованных сервисных и официальных импортеров автомобилей, ведущих дистрибьюторов
-                        автозапчастей и авторизованных сервис центров известных производителей дизельных систем.
-                        Внедрение наших продуктов поддерживает рост наших клиентов на рынке афтермаркета.
+                    <h2>{% trans 'Результаты поиска'%}</h2>
+                    <p>{% trans 'Наши клиенты - это небольшие авторемонтные мастерские и конечные потребители. Также крупные сети авторизованных сервисных и официальных импортеров автомобилей, ведущих дистрибьюторов автозапчастей и авторизованных сервис центров известных производителей дизельных систем. Внедрение наших продуктов поддерживает рост наших клиентов на рынке афтермаркета.'%}
                     </p>
                 </div>
 
                 <form class="form-inline pb-4 mb-1" role="search" action="{% url 'search' %}" method="get">
-                    <h3>Пример ввода номера форсунки: </h3>
+                    <h3>{% trans 'Пример ввода номера форсунки:'%} </h3>
                     <div class="col-auto mb-2">
                         <label for="inlineFormInput"></label><input type="search" class="form-control form-control-lg" id="inlineFormInput" name="q"
                                                                     placeholder="0445110520">
                     </div>
-                    <button type="submit" class="btn btn-primary mb-2 btn-lg ">Поиск</button>
-                    <a href="{% url 'shop' %}" class="btn btn-warning btn-lg mb-2 ml-3">Вернуться в магазин</a>
+                    <button type="submit" class="btn btn-primary mb-2 btn-lg ">{% trans 'Поиск'%}</button>
+                    <a href="{% url 'shop' %}" class="btn btn-warning btn-lg mb-2 ml-3">{% trans 'Вернуться в магазин'%}</a>
 
 
                 </form>
@@ -55,12 +53,12 @@
                                     </h4>
 
                                     <h4 class="font-weight-bold blue-text">
-                                        <strong>{{ post.price }}$</strong>
+                                        <strong>{{ post.price }}zł</strong>
                                     </h4>
                                           <div style=" text-align:center">
                                           <a href="{{ post.get_absolute_url }}"
                                             class="good-item__btn-add btn btn-success btn-lg js-add-to-cart "
-                                                data-id="" data-name="" data-price="">Добавить в корзину
+                                                data-id="" data-name="" data-price="">{% trans 'Добавить в корзину'%}
                                             <i class="fas fa-shopping-cart ml-1"></i>
                                           </a>
 

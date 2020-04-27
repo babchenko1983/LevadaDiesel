@@ -1,19 +1,15 @@
 from django.db.models import Q
-from django.shortcuts import render, get_object_or_404
-from django.views.generic import ListView, DetailView, View
+from django.shortcuts import render
+from django.views.generic import ListView,View
 from .models import Product
 
 
 def index(request):
     return render(request, 'index.html')
 
-# def team(request):
-#     return render(request, 'index.html')
-#
+
 def contact(request):
     return render(request, 'contact.html')
-
-
 
 
 class ItemDetailView(View):
@@ -27,10 +23,10 @@ def shop(request):
     product = Product.objects.all()
     for i in product:
         if i.stock == 0:
-            i.active=False
+            i.active = False
             i.save()
         else:
-            i.active=True
+            i.active = True
             i.save()
     context = {
         'pr': product

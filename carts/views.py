@@ -1,12 +1,10 @@
 from django.shortcuts import render, HttpResponseRedirect
 from django.urls import reverse
-
 from .models import Cart, CartItem
 from web.models import Product
 
 
 def view(request):
-
     try:
         the_id = request.session['cart_id']
         cart = Cart.objects.get(id=the_id)
@@ -25,9 +23,7 @@ def view(request):
         cart.save()
         context = {'cart': cart}
     else:
-        empty_message = "Ваша корзина пуста"
-        context = {"empty": True,
-                   'empty_message': empty_message, }
+        context = {"empty": True, }
     return render(request, 'view.html', context)
 
 
@@ -36,6 +32,7 @@ def add_to_cart(request, slug):
 
     try:
         the_id = request.session['cart_id']
+        print(the_id)
     except:
         new_cart = Cart()
         new_cart.save()

@@ -1,7 +1,8 @@
 {% extends 'main.html' %}
 {% load static %}
+{% load i18n %}
 {% block title_page %}
-    <title xmlns:text-align="http://www.w3.org/1999/xhtml">Магазин</title>
+    <title xmlns:text-align="http://www.w3.org/1999/xhtml">{% trans 'Магазин'%}</title>
 {% endblock %}
 {% block content %}
 <div style=" background-color: #ECF6CE;">
@@ -9,31 +10,25 @@
         <div class="container">
 
             <div class="section-title" data-aos="fade-in" data-aos-delay="100">
-                <h2>Магазин</h2>
-                <p>Мы предлагаем восстановленные форсунки Common Rail, насос-форсунки UIS / PDE и механические
-                    форсунки.Форсунки восстанавливаются исключительно с использованием оригинальных запасных частей. При
-                    восстановлении мы выполняем все процедуры, указанные производителями форсунок и отвечаем строгим
-                    критериям, гарантирующим 100% функциональность. Форсунки тестируются на сертифицированном
-                    испытательном
-                    и калибровочном оборудовании. Мы предлагаем восстановленные ТНВД Bosch, оснащенные блоком управления
-                    PSG5. Мы поставляем десятки типов насосов VP29, VP30 и VP44.
+                <h2>{% trans 'Магазин'%}</h2>
+                <p>{% trans 'Мы предлагаем восстановленные форсунки Common Rail, насос-форсунки UIS / PDE и механические форсунки.Форсунки восстанавливаются исключительно с использованием оригинальных запасных частей. При восстановлении мы выполняем все процедуры, указанные производителями форсунок и отвечаем строгим критериям, гарантирующим 100% функциональность. Форсунки тестируются на сертифицированном испытательном и калибровочном оборудовании. Мы предлагаем восстановленные ТНВД Bosch, оснащенные блоком управления PSG5. Мы поставляем десятки типов насосов VP29, VP30 и VP44.'%}
                 </p>
             </div>
 
             <form class="form-inline pb-4 mb-1" role="search" action="{% url 'search' %}" method="get">
-                <h3>Пример ввода номера форсунки: </h3>
+                <h3>{% trans 'Пример ввода номера форсунки:'%}</h3>
                 <div class="col-auto mb-2">
                     <input type="search" class="form-control form-control-lg" id="inlineFormInput" name="q"
                            placeholder="0445110520">
                 </div>
-                <button type="submit" class="btn btn-primary mb-2 btn-lg ">Поиск</button>
+                <button type="submit" class="btn btn-primary mb-2 btn-lg ">{% trans 'Поиск'%}</button>
             </form>
 
 
             <div class="row " data-aos="fade-in">
                 <div class="col-lg-5 d-flex justify-content-center">
                     <ul id="portfolio-flters">
-                        <li data-filter="" class="filter-active">Все</li>
+                        <li data-filter="" class="filter-active">{% trans 'Все'%}</li>
                         <li data-filter=".filter-denso">Denso</li>
                         <li data-filter=".filter-delphi">Delphi</li>
                         <li data-filter=".filter-siemens">Siemens</li>
@@ -43,32 +38,6 @@
             </div>
 
             <div class="row portfolio-container" data-aos="fade-up">
-
-                {#                        {% for post1 in pr %}#}
-                {##}
-                {##}
-                {##}
-                {#                          {% if post1.availability %}#}
-                {##}
-                {##}
-                {#                            <div class="col-lg-3 col-md-6 portfolio-item filter-bosch">#}
-                {#                                    <div class="portfolio-wrap  ">#}
-                {#                                        <a href="/{{ post1.url }}/"><img src="{{ post1.image.url }}" alt="" class="img-fluid">#}
-                {##}
-                {#                                        <p style="font-size:14px; text-align:center">{{ post1.name }} {{ post1.number }}</p>#}
-                {#                                        <p style="font-size:12px; text-align:center">{{ post1.description}}</p>#}
-                {#                                        <p style="font-size:18px; text-align:center"> Цена: {{ post.price }} EUR.</p></a>#}
-                {#                                    </div>#}
-                {##}
-                {#                                <div style=" text-align:center">#}
-                {#                                <button#}
-                {#                                        class="good-item__btn-add btn btn-success btn-sm js-add-to-cart"#}
-                {#                                        data-id="" data-name="" data-price="">Добавить в корзину#}
-                {#                                </button>#}
-                {#                                </div>#}
-                {#                            </div>#}
-                {#                            {% endif %}#}
-                {#                        {% endfor %}#}
 
                 {% for post in pr %}
                 {% if post.active %}
@@ -94,12 +63,12 @@
                                         </strong>
                                     </h4>
                                     <h4 class="font-weight-bold blue-text">
-                                        <strong>{{ post.price }}$</strong>
+                                        <strong>{{ post.price }} zł</strong>
                                     </h4>
                                     <div style=" text-align:center">
                                           <a href="{{ post.get_absolute_url }}"
                                             class="good-item__btn-add btn btn-success btn-lg js-add-to-cart "
-                                                data-id="" data-name="" data-price="">Добавить в корзину
+                                                data-id="" data-name="" data-price="">{% trans 'Добавить в корзину'%}
                                             <i class="fas fa-shopping-cart ml-1"></i>
                                           </a>
 
@@ -133,12 +102,12 @@
                                         </strong>
                                     </h4>
                                     <h4 class="font-weight-bold blue-text">
-                                        <strong>{{ post.price }}$</strong>
+                                        <strong>{{ post.price }} zł</strong>
                                     </h4>
                                      <div style=" text-align:center">
                                           <a href="{{ post.get_absolute_url }}"
                                             class="good-item__btn-add btn btn-success btn-lg js-add-to-cart "
-                                                data-id="" data-name="" data-price="">Добавить в корзину
+                                                data-id="" data-name="" data-price="">{% trans 'Добавить в корзину'%}
                                             <i class="fas fa-shopping-cart ml-1"></i>
                                           </a>
 
@@ -170,12 +139,12 @@
                                         </strong>
                                     </h4>
                                     <h4 class="font-weight-bold blue-text">
-                                        <strong>{{ post.price }}$</strong>
+                                        <strong>{{ post.price }} zł</strong>
                                     </h4>
                                      <div style=" text-align:center">
                                           <a href="{{ post.get_absolute_url }}"
                                             class="good-item__btn-add btn btn-success btn-lg js-add-to-cart "
-                                                data-id="" data-name="" data-price="">Добавить в корзину
+                                                data-id="" data-name="" data-price="">{% trans 'Добавить в корзину'%}
                                             <i class="fas fa-shopping-cart ml-1"></i>
                                           </a>
 
@@ -207,12 +176,12 @@
                                         </strong>
                                     </h4>
                                     <h4 class="font-weight-bold blue-text">
-                                        <strong>{{ post.price }}$</strong>
+                                        <strong>{{ post.price }} zł</strong>
                                     </h4>
                                       <div style=" text-align:center">
                                           <a href="{{ post.get_absolute_url }}"
                                             class="good-item__btn-add btn btn-success btn-lg js-add-to-cart "
-                                                data-id="" data-name="" data-price="">Добавить в корзину
+                                                data-id="" data-name="" data-price="">{% trans 'Добавить в корзину'%}
                                             <i class="fas fa-shopping-cart ml-1"></i>
                                           </a>
 
@@ -246,12 +215,12 @@
                                     </strong>
                                 </h4>
                                 <h4 class="font-weight-bold blue-text">
-                                    <strong>{{ post.price }}$</strong>
+                                    <strong>{{ post.price }} zł</strong>
                                 </h4>
                                 <div style=" text-align:center">
                                     <button
                                             class="good-item__btn-add btn btn-success btn-lg js-add-to-cart"
-                                            data-id="" data-name="" data-price="">Добавить в корзину
+                                            data-id="" data-name="" data-price="">{% trans 'Добавить в корзину '%}
                                     </button>
                                 </div>
                             </div>
@@ -261,106 +230,6 @@
                 {% endif %}
 
 
-
-
-                {#                        {% if post.name == 'BOSCH' %}#}
-                {#                            <div class="col-lg-3 col-md-6 portfolio-item filter-bosch">#}
-                {#                                <div class="portfolio-wrap">#}
-                {#                                    <img src="{{ post.image.url }}" class="img-fluid" alt="">#}
-                {#                                    <h6>{{ post.name }},{{ post.number }}</h6>#}
-                {#                                    <p>Цена: {{ post.price }} eur.</p>#}
-                {#                                </div>#}
-                {#                            </div>#}
-                {#                        {% elif post.name == 'SIEMENS' %}#}
-                {#                            <div class="col-lg-3 col-md-6 portfolio-item filter-web">#}
-                {#                                <div class="portfolio-wrap">#}
-                {#                                    <img src="{{ post.image.url }}" class="img-fluid" alt="">#}
-                {#                                    <h6>{{ post.name }},{{ post.number }}</h6>#}
-                {#                                    <p>Цена: {{ post.price }} eur.</p>#}
-                {#                                </div>#}
-                {#                            </div>#}
-                {#                        {% elif post.name == 'DENSO' %}#}
-                {#                            <div class="col-lg-3 col-md-6 portfolio-item filter-app">#}
-                {#                                <div class="portfolio-wrap">#}
-                {#                                    <img src="{{ post.image.url }}" class="img-fluid" alt="">#}
-                {#                                    <h6>{{ post.name }},{{ post.number }}</h6>#}
-                {#                                    <p>Цена: {{ post.price }} eur.</p>#}
-                {#                                </div>#}
-                {#                            </div>#}
-                {#                        {% elif post.name == 'DELPHI' %}#}
-                {#                            <div class="col-lg-3 col-md-6 portfolio-item filter-card">#}
-                {#                                <div class="portfolio-wrap">#}
-                {#                                    <img src="{{ post.image.url }}" class="img-fluid" alt="">#}
-                {#                                    <h6>{{ post.name }},{{ post.number }}</h6>#}
-                {#                                    <p>Цена: {{ post.price }} eur.</p>#}
-                {#                                </div>#}
-                {#                            </div>#}
-                {##}
-                {#                            <div class="col-lg-4 col-md-6 portfolio-item filter-app">#}
-                {#                                <div class="portfolio-wrap">#}
-                {#                                    <img src="{% static 'assets/img/portfolio/portfolio-6.jpg' %}" class="img-fluid"#}
-                {#                                         alt="">#}
-                {#                                    <div class="portfolio-links">#}
-                {#                                        <a href="{% static 'assets/img/portfolio/portfolio-6.jpg' %}"#}
-                {#                                           data-gall="portfolioGallery" class="venobox" title="App 3"><i#}
-                {#                                                class="bx bx-plus"></i></a>#}
-                {#                                        <a href="#" title="More Details"><i class="bx bx-link"></i></a>#}
-                {#                                    </div>#}
-                {#                                </div>#}
-                {#                            </div>#}
-                {##}
-                {#                            <div class="col-lg-4 col-md-6 portfolio-item filter-card">#}
-                {#                                <div class="portfolio-wrap">#}
-                {#                                    <img src="{% static 'assets/img/portfolio/portfolio-7.jpg' %}" class="img-fluid"#}
-                {#                                         alt="">#}
-                {#                                    <div class="portfolio-links">#}
-                {#                                        <a href="{% static 'assets/img/portfolio/portfolio-7.jpg' %}"#}
-                {#                                           data-gall="portfolioGallery" class="venobox" title="Card 1"><i#}
-                {#                                                class="bx bx-plus"></i></a>#}
-                {#                                        <a href="#" title="More Details"><i class="bx bx-link"></i></a>#}
-                {#                                    </div>#}
-                {#                                </div>#}
-                {#                            </div>#}
-                {##}
-                {#                            <div class="col-lg-4 col-md-6 portfolio-item filter-card">#}
-                {#                                <div class="portfolio-wrap">#}
-                {#                                    <img src="{% static 'assets/img/portfolio/portfolio-8.jpg' %}" class="img-fluid"#}
-                {#                                         alt="">#}
-                {#                                    <div class="portfolio-links">#}
-                {#                                        <a href="{% static 'assets/img/portfolio/portfolio-8.jpg' %}"#}
-                {#                                           data-gall="portfolioGallery" class="venobox" title="Card 3"><i#}
-                {#                                                class="bx bx-plus"></i></a>#}
-                {#                                        <a href="#" title="More Details"><i class="bx bx-link"></i></a>#}
-                {#                                    </div>#}
-                {#                                </div>#}
-                {#                            </div>#}
-                {##}
-                {#                            <div class="col-lg-4 col-md-6 portfolio-item filter-web">#}
-                {#                                <div class="portfolio-wrap">#}
-                {#                                    <img src="{% static 'assets/img/portfolio/portfolio-9.jpg' %}" class="img-fluid"#}
-                {#                                         alt="">#}
-                {#                                    <div class="portfolio-links">#}
-                {#                                        <a href="{% static 'assets/img/portfolio/portfolio-9.jpg' %}"#}
-                {#                                           data-gall="portfolioGallery" class="venobox" title="Web 3"><i#}
-                {#                                                class="bx bx-plus"></i></a>#}
-                {#                                        <a href="#" title="More Details"><i class="bx bx-link"></i></a>#}
-                {#                                    </div>#}
-                {#                                </div>#}
-                {#                            </div>#}
-                {##}
-                {#                            </div>#}
-                {#                        {% endif %}#}
-                {#                    {% else %}#}
-                {#                            <div class="col-lg-3 col-md-6 portfolio-item filter-card">#}
-                {#                                <div class="portfolio-wrap">#}
-                {#                                    <img src="{% static 'assets/img/noimage.png' %}" class="img-fluid" alt="">#}
-                {#                                    <h6>{{ post.name }},{{ post.number }}</h6>#}
-                {#                                    <p>Нет в наличии#}
-                {#                                </div>#}
-                {#                            </div>#}
-
-                {#                    {% endif %}#}
-                {#                {% endfor %}#}
                 {% endfor %}
             </div>
         </div>
@@ -368,97 +237,3 @@
     </section>
 </div>
 {% endblock content %}
-{#{% load static %}#}
-{#<!DOCTYPE html>#}
-{#<html lang="en">#}
-{##}
-{#<head>#}
-{#    <meta charset="utf-8">#}
-{#    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">#}
-{#    <meta http-equiv="x-ua-compatible" content="ie=edge">#}
-{#    <title>Material Design Bootstrap</title>#}
-{#    <!-- Font Awesome -->#}
-{#    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css'%}">#}
-{#    <!-- Bootstrap core CSS -->#}
-{#    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">#}
-{#    <!-- Material Design Bootstrap -->#}
-{#    <link href="{% static 'css/mdb.min.css' %}" rel="stylesheet">#}
-{#    <!-- Your custom styles (optional) -->#}
-{#    <link href="{% static 'css/style.min.css' %}" rel="stylesheet">#}
-{##}
-{#</head>#}
-{##}
-{#<body>#}
-{##}
-{#<main>#}
-{##}
-{#    <!--Fourth column-->#}
-{#    <div class="col-lg-3 col-md-6 mb-4">#}
-{##}
-{#        <!--Card-->#}
-{#        <div class="card">#}
-{##}
-{#            <!--Card image-->#}
-{#            <div class="view overlay">#}
-{#                <a href="{% url 'home' %}">#}
-{#                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12.jpg"#}
-{#                         class="card-img-top"#}
-{#                         alt="">#}
-{##}
-{#                    <div class="mask rgba-white-slight"></div>#}
-{#                </a>#}
-{#            </div>#}
-{#            <!--Card image-->#}
-{##}
-{#            <!--Card content-->#}
-{#            <div class="card-body text-center">#}
-{#                <!--Category & Title-->#}
-{#                <a href="" class="grey-text">#}
-{#                    <h5>Outwear</h5>#}
-{#                </a>#}
-{#                <h5>#}
-{#                    <strong>#}
-{#                        <a href="" class="dark-grey-text">Black jacket</a>#}
-{#                    </strong>#}
-{#                </h5>#}
-{##}
-{#                <h4 class="font-weight-bold blue-text">#}
-{#                    <strong>219$</strong>#}
-{#                </h4>#}
-{#                <div style=" text-align:center">#}
-{#                    <button#}
-{#                            class="good-item__btn-add btn btn-success btn-lg js-add-to-cart"#}
-{#                            data-id="" data-name="" data-price="">Добавить в корзину#}
-{#                    </button>#}
-{#                </div>#}
-{##}
-{#            </div>#}
-{##}
-{#            <!--Card content-->#}
-{##}
-{#        </div>#}
-{#        <!--Card-->#}
-{##}
-{#    </div>#}
-{#</main>#}
-{#<!--Main layout-->#}
-{##}
-{##}
-{#<!-- SCRIPTS -->#}
-{#<!-- JQuery -->#}
-{#<script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>#}
-{#<!-- Bootstrap tooltips -->#}
-{#<script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>#}
-{#<!-- Bootstrap core JavaScript -->#}
-{#<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>#}
-{#<!-- MDB core JavaScript -->#}
-{#<script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>#}
-{#<!-- Initializations -->#}
-{#<script type="text/javascript">#}
-{#    // Animations initialization#}
-{#    new WOW().init();#}
-{##}
-{##}
-{#</body>#}
-{##}
-{#</html>#}

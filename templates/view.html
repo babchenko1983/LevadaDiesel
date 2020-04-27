@@ -1,13 +1,23 @@
 
 {% load static %}
+{% load i18n %}
 {% if empty %}
 
 <div style=" background-color: #ECF6CE">
 
-    <h1 style="text-align: center">{{ empty_message }}</h1>
+
+    {% get_current_language as LANGUAGE_CODE %}
+    {% if LANGUAGE_CODE == 'ru' %}
+            <h1 style="text-align: center">Ваша корзина пуста</h1>
+        {% elif LANGUAGE_CODE == 'en' %}
+        <h1 style="text-align: center">Your Cart is empty</h1>
+        {% else  %}
+        <h1 style="text-align: center">Twój koszyk jest pusty</h1>
+
+    {% endif %}
 
 
-    <td><a href="{% url 'shop' %}" class="btn btn-warning btn-lg mb-2 ml-3"><i class="fa fa-angle-left"></i><h3>Вернуться в магазин</h3></a></td>
+    <td><a href="{% url 'shop' %}" class="btn btn-warning btn-lg mb-2 ml-3"><i class="fa fa-angle-left"></i><h3>{% trans 'Вернуться в магазин'%}</h3></a></td>
 
 
 </div>
@@ -60,12 +70,12 @@
         <!-- Left -->
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link waves-effect" href=" {%  url 'home'%}">На главную
+            <a class="nav-link waves-effect" href=" {%  url 'home'%}">{% trans 'На главную'%}
               <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link waves-effect" href="{% url 'shop' %}">Вернуться к поиску
+            <a class="nav-link waves-effect" href="{% url 'shop' %}">{% trans 'Вернуться к поиску'%}
               <span class="sr-only">(current)</span>
             </a>
           </li>
@@ -78,7 +88,7 @@
             <a href="{% url 'cart' %}"class="nav-link waves-effect">
               <span class="badge red z-depth-1 mr-1">{{request.session.items_total}} </span>
               <i class="fas fa-shopping-cart"></i>
-              <span class="clearfix d-none d-sm-inline-block"> Корзина </span>
+              <span class="clearfix d-none d-sm-inline-block"> {% trans 'Корзина'%} </span>
 
             </a>
           </li>
@@ -95,7 +105,7 @@
 
 <div style=" background-color: #ECF6CE">
     <div style="text-align:center">
-        <h2>КОРЗИНА
+        <h2>{% trans 'КОРЗИНА'%}
         </h2>
     </div>
     <div class="container">
@@ -104,11 +114,11 @@
             <table id="cart" class="table table-hover table-condensed  ">
                 <thead>
                 <tr>
-                    <th style="width:70%"class="text-center">Название продукта</th>
-                    <th style="width:10%"class="text-center">Цена</th>
-                    <th style="width:10%"class="text-center">Кол-во</th>
+                    <th style="width:70%"class="text-center">{% trans 'Название продукта'%}</th>
+                    <th style="width:10%"class="text-center">{% trans 'Цена'%}</th>
+                    <th style="width:10%"class="text-center">{% trans 'Кол-во'%}</th>
                     <th style="width:18%" class="text-center"></th>
-                    <th style="width:0%">Удалить</th>
+                    <th style="width:0%">{% trans 'Удалить'%}</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -122,18 +132,18 @@
                                                                      class="img-responsive"/></div>
                                 <div class="col-sm-5">
                                     <h4 class="nomargin">{{ i.product.name }} {{ i.product.number }}</h4>
-                                    <p>{{ i.product.description}}</p>
+                                    <p>{{ i.product.description|truncatechars_html:300}}</p>
                                 </div>
                             </div>
                         </td>
-                        <td data-th="Price" class="text-center"><h4>{{ i.product.price }} $</h4></td>
-                        <td data-th="Quantity" class="text-center"><h4>{{ i.quantity }} шт.</h4></td>
+                        <td data-th="Price" class="text-center"><h4>{{ i.product.price }} zł</h4></td>
+                        <td data-th="Quantity" class="text-center"><h4>{{ i.quantity }} {% trans 'шт'%}.</h4></td>
 
 
                         <td data-th="Subtotal" class="text-center"></td>
 
                         <td class="actions" data-th="" >
-                            <button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
+{#                            <button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>#}
                             <a class="btn btn-danger btn-sm" href="{% url 'remove_from_cart' i.id %}"><i
                                     class="fa fa-trash-o"></i></a>
                         </td>
@@ -145,24 +155,14 @@
 
 
                     <tr>
-                        <td><a href="{% url 'shop' %}" class="btn btn-warning btn-lg mb-2 ml-3">Вернуться в магазин</a></td>
+                        <td><a href="{% url 'shop' %}" class="btn btn-warning btn-lg mb-2 ml-3">{% trans 'Вернуться в магазин'%}</a></td>
                         <td colspan="2" class="hidden-xs"></td>
-                        <td class="hidden-xs text-center"><strong><h4>Итого: {{ cart.total }} $</h4></strong></td>
-                        <td><a href="{% url 'checkout' %}" class="btn btn-success btn-lg mb-2 ml-3">Оформить</a></td>
+                        <td class="hidden-xs text-center"><strong><h4>{% trans 'Итого: '%}  {{ cart.total }} zł</h4></strong></td>
+                        <td><a href="{% url 'checkout' %}" class="btn btn-success btn-lg mb-2 ml-3">{% trans 'Оформить'%}</a></td>
                     </tr>
                     </tfoot>
-
-
-
-{#                    <tfoot>#}
-{#						<tr>#}
-{#							<td><a href="{% url 'shop' %}" class="btn btn-warning btn-lg mb-2 ml-3"><i class="fa fa-angle-left"></i> Вернуться в магазин</a></td>#}
-{#							<td colspan="2" class="hidden-xs"></td>#}
-{#							<td class="hidden-xs text-center"><strong><h3>Итого: {{ cart.total }} $</h3></strong></td>#}
-{#						<td><button onclick=" location.href=button.getUrl(); "  class="btn btn-success btn-lg btn-block">Оплата</button></td>#}
-{#                        </tr>#}
-{#					</tfoot>#}
             </table>
+
 
 
         </div>
@@ -194,37 +194,7 @@
   <script type="text/javascript">
     // Animations initialization
     new WOW().init();</script>
-{#  <script src="https://api.fondy.eu/static_common/v1/checkout/ipsp.js"></script>#}
-{#<script>#}
-{#	var button = $ipsp.get('button');#}
-{#	button.setMerchantId(1396424);#}
-{#	button.setAmount({{ cart.total }}, 'USD', true);#}
-{#	button.setResponseUrl('http://example.com/result/');#}
-{#	button.setHost('api.fondy.eu');#}
-{#	button.addField({#}
-{#		label: 'ФИО',#}
-{#		name: 'fio',#}
-{#		required: true#}
-{#	});#}
-{#	button.addField({#}
-{#		label: 'Описание платежа',#}
-{#		name: 'description',#}
-{#        required: true#}
-{##}
-{#	});#}
-{#		button.addField({#}
-{#		label: 'Описание платежа',#}
-{#		name: 'description',#}
-{#        required: true#}
-{##}
-{#	});#}
-{#			button.addField({#}
-{#		label: 'Описание платежа',#}
-{#		name: 'description',#}
-{#        required: true#}
-{##}
-{#	});#}
-{#</script>#}
+
 
 </div>
 

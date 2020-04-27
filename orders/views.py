@@ -9,28 +9,31 @@ def order_create(request):
     cart = Cart.objects.get(id=the_id)
 
     if request.method == 'POST':
-        print(request.POST)
         form = OrderCreateForm(request.POST)
         if form.is_valid():
             print('ok')
             order = form.save()
             for item in cart.cartitem_set.all():
-                print(item.cart.total)
                 OrderItem.objects.create(order=order,
                                          product=item.product,
                                          number=item.product.number,
                                          quantity=item.quantity,
                                          total_price=cart.total)
 
+            a=OrderItem.objects.all().last().total_price
+            cart.delete()
+            try:
+                del request.session['cart_id']
+            except KeyError:
+                pass
 
-                # cart.delete()
-            # # очистка корзины
+
+
+
 
         return render(request, 'order.html',
-                          {'order': order,
-                          'cart': cart}
-
-                          )
+                          {'order': order,'a':a,
+                           })
 
 
     else:

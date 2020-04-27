@@ -4,7 +4,6 @@ from .models import Product
 
 class ProductAdmin(admin.ModelAdmin):
     search_fields = ['name','number']
-    # list_display = [field.name for field in Product._meta.fields]
     list_display = ['name','number','slug','active','price','stock']
     list_editable = ['active', 'stock', 'price']
     prepopulated_fields = {'slug':('number',)}

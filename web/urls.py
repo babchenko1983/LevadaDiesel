@@ -10,7 +10,6 @@ urlpatterns = [
 
     path('', views.index, name='home'),
     path('shop/', views.shop, name='shop'),
-    # path('/team/', views.team, name='team'),
     path('contact/', views.contact, name='contact'),
     path('search/', Search.as_view(), name='search'),
     path("<slug:slug>/", ItemDetailView.as_view(), name='single'),

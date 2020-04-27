@@ -1,10 +1,10 @@
-
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     {% block title_page %}
-        <title>Главная</title>
+        <title>{% trans 'Главная' %}</title>
     {% endblock %}
 
     {% load static %}
@@ -38,21 +38,19 @@
 
         </div>
         <div class="logo mr-auto">
-            <h7>+38(099)9999999 (Пон-Пят: 8:00-18:00 )</h7>
+            <h7>{% trans '+48787364255 (Пон-Пят: 8:00-18:00 )'%}</h7>
         </div>
 
         <nav class="nav-menu d-none d-lg-block">
             <ul>
-                <li class="active"><a href="{% url 'home' %}">Главная</a></li>
-                {#          <li><a href="#about"></a></li>#}
-                {#          <li><a href="#services">Services</a></li>#}
-                <li><a href="{% url 'shop' %}">Магазин</a></li>
-{#                <li><a href="{% url 'team' %}">Наша команда</a></li>#}
+                <li class="active"><a href="{% url 'home' %}">{% trans 'Главная' %}</a></li>
+
+                <li><a href="{% url 'shop' %}">{% trans 'Магазин'%}</a></li>
 {##}
-                <li><a href="{% url 'contact' %}">Контакты</a></li>
+                <li><a href="{% url 'contact' %}">{% trans 'Контакты'%}</a></li>
 
                 <li><a href="{% url 'cart' %}" class="nav-link waves-effect">
-                    <span class="clearfix d-none d-sm-inline-block">{{ cart.total}} Корзина </span>
+                    <span class="clearfix d-none d-sm-inline-block">{{ cart.total}} {% trans 'Корзина'%} </span>
                     <span class="badge red z-depth-1 mr-1"><h6>{{request.session.items_total}}</h6></span>
 {#                    <i class="fas fa-shopping-cart"></i>#}
 
