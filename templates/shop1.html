@@ -51,6 +51,11 @@
                                             <a href="" class="dark-grey-text">{{ post.number }}</a>
 
                                     </h4>
+                                      <h6>
+                                        <strong>
+                                            <a href="" class="dark-grey-text">{{ post.description|truncatechars_html:125 }}</a>
+                                        </strong>
+                                    </h6>
 
                                     <h4 class="font-weight-bold blue-text">
                                         <strong>{{ post.price }}zł</strong>
