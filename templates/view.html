@@ -1,9 +1,8 @@
-
 {% load static %}
 {% load i18n %}
 {% if empty %}
 
-<div style=" background-color: #ECF6CE">
+<div style=" background-color: #ffc7a1">
 
 
     {% get_current_language as LANGUAGE_CODE %}
@@ -53,12 +52,12 @@
 
 </head>
 <body>
-<div style=" background-color: #CEF6CE">
+<div style=" background-color: #9fc74999">
 <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
     <div class="container">
 
       <!-- Brand -->
-      <a class="navbar-brand waves-effect" href="{% url 'home' %}" target="_blank">
+      <a class="navbar-brand waves-effect" href="" target="_blank">
         <strong class="blue-text">Levada Diesel Service</strong>
       </a>
 
@@ -70,14 +69,7 @@
         <!-- Left -->
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link waves-effect" href=" {%  url 'home'%}">{% trans 'На главную'%}
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link waves-effect" href="{% url 'shop' %}">{% trans 'Вернуться к поиску'%}
-              <span class="sr-only">(current)</span>
-            </a>
+              <h3>{% trans '+48787364255 (Пон-Пят: 8:00-18:00 )'%}</h3>
           </li>
 
         </ul>
@@ -103,86 +95,88 @@
 </nav>
 
 
-<div style=" background-color: #ECF6CE">
-    <div style="text-align:center">
-        <h2>{% trans 'КОРЗИНА'%}
-        </h2>
-    </div>
-    <div class="container">
-        <div>
-
-            <table id="cart" class="table table-hover table-condensed  ">
-                <thead>
-                <tr>
-                    <th style="width:70%"class="text-center">{% trans 'Название продукта'%}</th>
-                    <th style="width:10%"class="text-center">{% trans 'Цена'%}</th>
-                    <th style="width:10%"class="text-center">{% trans 'Кол-во'%}</th>
-                    <th style="width:18%" class="text-center"></th>
-                    <th style="width:0%">{% trans 'Удалить'%}</th>
-                </tr>
-                </thead>
-                <tbody>
-
-                {% for i in cart.cartitem_set.all %}
-
-                    <tr>
-                        <td data-th="Product">
-                            <div class="row">
-                                <div class="col-sm-6 hidden-xs"><img src="{{ i.product.image.url }}" alt="..."
-                                                                     class="img-responsive"/></div>
-                                <div class="col-sm-5">
-                                    <h4 class="nomargin">{{ i.product.name }} {{ i.product.number }}</h4>
-                                    <p>{{ i.product.description|truncatechars_html:300}}</p>
-                                </div>
-                            </div>
-                        </td>
-                        <td data-th="Price" class="text-center"><h4>{{ i.product.price }} zł</h4></td>
-                        <td data-th="Quantity" class="text-center"><h4>{{ i.quantity }} {% trans 'шт'%}.</h4></td>
-
-
-                        <td data-th="Subtotal" class="text-center"></td>
-
-                        <td class="actions" data-th="" >
-{#                            <button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>#}
-                            <a class="btn btn-danger btn-sm" href="{% url 'remove_from_cart' i.id %}"><i
-                                    class="fa fa-trash-o"></i></a>
-                        </td>
-                    </tr>
-                    </tbody>
-                {% endfor %}
-
-                    <tfoot>
-
-
-                    <tr>
-                        <td><a href="{% url 'shop' %}" class="btn btn-warning btn-lg mb-2 ml-3">{% trans 'Вернуться в магазин'%}</a></td>
-                        <td colspan="2" class="hidden-xs"></td>
-                        <td class="hidden-xs text-center"><strong><h4>{% trans 'Итого: '%}  {{ cart.total }} zł</h4></strong></td>
-                        <td><a href="{% url 'checkout' %}" class="btn btn-success btn-lg mb-2 ml-3">{% trans 'Оформить'%}</a></td>
-                    </tr>
-                    </tfoot>
-            </table>
-
-
-
-        </div>
-        <script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
-        <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-        <script src="{% static 'assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
-        <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
-        <script src="{% static 'assets/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
-        <script src="{% static 'assets/vendor/counterup/counterup.min.js' %}"></script>
-        <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
-        <script src="{% static 'assets/vendor/venobox/venobox.min.js' %}"></script>
-        <script src="{% static 'assets/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
-        <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
-
-        <!-- Template Main JS File -->
-        <script src="{% static 'assets/js/main.js' %}"></script>
-
-        <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
-    </div>
+{#<div style=" background-color: #ECF6CE">#}
+<div style="text-align:center">
+    <h2>{% trans 'КОРЗИНА' %}
+    </h2>
 </div>
+<div class="container">
+    <div>
+
+        <table id="cart" class="table table-hover table-condensed  ">
+            <thead>
+            <tr>
+                <th style="width:70%" class="text-center">{% trans 'Название продукта' %}</th>
+                <th style="width:10%" class="text-center">{% trans 'Цена' %}</th>
+                <th style="width:10%" class="text-center">{% trans 'Кол-во' %}</th>
+                <th style="width:18%" class="text-center"></th>
+                <th style="width:0%">{% trans 'Удалить' %}</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            {% for i in cart.cartitem_set.all %}
+
+                <tr>
+                    <td data-th="Product">
+                        <div class="row">
+                            <div class="col-sm-6 hidden-xs"><img src="{{ i.product.image.url }}" alt="..."
+                                                                 class="img-responsive"/></div>
+                            <div class="col-sm-5">
+                                <h4 class="nomargin">{{ i.product.name }} {{ i.product.number }}</h4>
+                                <p>{{ i.product.description|truncatechars_html:300 }}</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td data-th="Price" class="text-center"><h4>{{ i.product.price }} zł</h4></td>
+                    <td data-th="Quantity" class="text-center"><h4>{{ i.quantity }} {% trans 'шт' %}.</h4></td>
+
+
+                    <td data-th="Subtotal" class="text-center"></td>
+
+                    <td class="actions" data-th="">
+                        {#                            <button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>#}
+                        <a class="btn btn-danger btn-sm" href="{% url 'remove_from_cart' i.id %}"><i
+                                class="fa fa-trash-o"></i></a>
+                    </td>
+                </tr>
+                </tbody>
+            {% endfor %}
+
+            <tfoot>
+
+
+            <tr>
+                <td><a href="{% url 'shop' %}"
+                       class="btn btn-warning btn-lg mb-2 ml-3">{% trans 'Вернуться в магазин' %}</a></td>
+                <td colspan="2" class="hidden-xs"></td>
+                <td class="hidden-xs text-center"><strong><h4>{% trans 'Итого: ' %} {{ cart.total }} zł</h4></strong>
+                </td>
+                <td><a href="{% url 'checkout' %}" class="btn btn-success btn-lg mb-2 ml-3">{% trans 'Оформить' %}</a>
+                </td>
+            </tr>
+            </tfoot>
+        </table>
+
+
+    </div>
+    <script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+    <script src="{% static 'assets/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/counterup/counterup.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/venobox/venobox.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+
+    <!-- Template Main JS File -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+
+    {#        <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>#}
+</div>
+
   <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js'%}"></script>
   <!-- Bootstrap tooltips -->
   <script type="text/javascript" src="{% static 'js/popper.min.js'%}"></script>
@@ -196,7 +190,7 @@
     new WOW().init();</script>
 
 
-</div>
+{#</div>#}
 
 
 

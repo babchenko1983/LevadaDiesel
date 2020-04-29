@@ -21,11 +21,11 @@ def order_create(request):
                                          total_price=cart.total)
 
             a=OrderItem.objects.all().last().total_price
-            cart.delete()
-            try:
-                del request.session['cart_id']
-            except KeyError:
-                pass
+            # cart.delete()
+            # try:
+            #     del request.session['cart_id']
+            # except KeyError:
+            #     pass
 
 
 

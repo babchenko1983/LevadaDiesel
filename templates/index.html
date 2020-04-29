@@ -7,10 +7,22 @@
 <title>Title</title>
 {% endblock title_page %}
 {% block content %}
+<head>
+        <style>
+   .stroke {
+    font: 2em Arial, sans-serif;
+    text-shadow: red 0 0 2px;
+   }
+  </style>
+</head>
 
   <!-- ======= Hero Section ======= -->
+{#<div class="intro">#}
+{#    <div class="video">#}
+{#        <video class="video__media" src="{% static '1.mp4' %}" autoplay muted loop></video>#}
   <section id="hero">
     <div class="hero-container" data-aos="fade-up">
+
       <h1>{% trans 'Добро пожаловать в LevadaDieselService'%}</h1>
       <h2> {% trans 'Мы предлагаем широкий спектр ТНВД, радиальных насосов, дизельных форсунок.'%}</h2>
 
@@ -47,11 +59,13 @@
 
     </div>
   </section><!-- End Hero -->
-
-  <main id="main">
-
-
-  </main><!-- End #main -->
+{##}
+{#  <main id="main">#}
+{##}
+{##}
+{#  </main><!-- End #main -->#}
+</div>
+</div>
 
 {% endblock content%}
 

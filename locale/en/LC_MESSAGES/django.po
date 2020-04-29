@@ -1321,10 +1321,8 @@ msgid "Главная"
 msgstr "Main"
 
 #: .\templates\main.html:41
-#, fuzzy
-#| msgid "+38(099)9999999 (Пон-Пят: 8:00-18:00 )"
 msgid "+48787364255 (Пон-Пят: 8:00-18:00 )"
-msgstr "+38(099)9999999 (Mon-Fri: 8:00-18:00 )"
+msgstr "+48787364255 (Mon-Fri: 8:00-18:00 )"
 
 #: .\templates\main.html:48 .\templates\shop.html:5 .\templates\shop.html:13
 #: .\templates\shop1.html:5

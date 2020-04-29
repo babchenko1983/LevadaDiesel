@@ -2,7 +2,28 @@
 html,
 body,
 .view {
-  height: 100%; }
+	 margin: 0;
+    font-family: Tahoma, sans-serif;
+  height: auto; }
+
+.video {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 56.25%;
+}
+.intro {
+	max-height: 100vh;
+	overflow: hidden;
+}
+
+.video__media {
+    width: 100%;
+    height: auto;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
 /* Half Page Carousel itself*/
 .carousel {
@@ -13,6 +34,7 @@ body,
     .carousel .carousel-inner .active {
       height: 100%; }
 
+
 /* Adjustment for mobile devices*/
 @media (max-width: 776px) {
   .carousel {
@@ -21,3 +43,37 @@ body,
 /* Footer color for sake of consistency with Navbar */
 .page-footer {
   background-color: #929FBA; }
+
+.table>tbody>tr>td, .table>tfoot>tr>td{
+    vertical-align: middle;
+}
+@media screen and (max-width: 600px) {
+    table#cart tbody td .form-control{
+		width:20%;
+		display: inline !important;
+	}
+	.actions .btn{
+		width:36%;
+		margin:1.5em 0;
+	}
+
+	.actions .btn-info{
+		float:left;
+	}
+	.actions .btn-danger{
+		float:right;
+	}
+
+	table#cart thead { display: none; }
+	table#cart tbody td { display: block; padding: .6rem; min-width:320px;}
+	table#cart tbody tr td:first-child { background: #333; color: #fff; }
+	table#cart tbody td:before {
+		content: attr(data-th); font-weight: bold;
+		display: inline-block; width: 8rem;
+	}
+
+
+
+	table#cart tfoot td{display:block; }
+	table#cart tfoot td .btn{display:block;}}
+

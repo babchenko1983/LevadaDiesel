@@ -10,7 +10,7 @@
 --------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
-  color: #444444;
+  color: #06005f;
 }
 
 a {
@@ -60,7 +60,8 @@ h1, h2, h3, h4, h5, h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  height: 80px;
+  background:  #ffffffd4;
+  height: 65px;
   transition: all 0.5s;
   z-index: 997;
   transition: all 0.5s;
@@ -85,7 +86,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header .logo h1 a, #header .logo h1 a:hover {
-  color: #2f4d5a;
+  color: #06005f;
   text-decoration: none;
 }
 
@@ -133,7 +134,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0);
   text-decoration: none;
 }
 
@@ -243,7 +244,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav-toggle i {
-  color: #fff;
+  color: #ff0000;
 }
 
 .mobile-nav {
@@ -339,7 +340,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg.jpg") top center;
+  background: url("../img/6.jpg") top center;
   background-size: cover;
   position: relative;
 }
@@ -363,17 +364,26 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 56px;
   text-transform: uppercase;
-  color: #fff;
-  text-shadow: -1px 0 2px #2f4d5a;
+  color: rgba(255, 255, 255, 5);
+  /*text-shadow: 1px -2px 0px #1e7e34;*/
+  сolor: #010172;
+ -webkit-text-stroke: 2px black;
+ -webkit-text-fill-color: #ffffff;
+
+
 }
 
+
 #hero h2 {
-  color: #fff;
+  color: rgb(255, 255, 255);
   margin-bottom: 50px;
   font-size: 20px;
   text-transform: uppercase;
   font-weight: 700;
-  text-shadow: -1px 0 2px #2f4d5a;
+  /*text-shadow: -1px 0 2px #2f4d5a;*/
+    сolor: #010900;
+ -webkit-text-stroke: 1px #030c00;
+ /*-webkit-text-fill-color: white;*/
 }
 
 #hero .btn-get-started {

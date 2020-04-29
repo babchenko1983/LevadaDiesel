@@ -1,9 +1,16 @@
-{% extends 'main.html' %}
+{#{% extends 'main.html' %}#}
 {% load static %}
 {% load crispy_forms_tags %}
 {% load i18n %}
 
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+</head>
+<body>
+
 <html lang="en">
 {% block content %}
 <div style=" background-color: #E0F8F7">
@@ -54,14 +61,14 @@
             <span class="text-muted" > {% trans 'Уважаемый'%} <h4>{{ order.first_name }} {{ order.last_name }}!</h4>{% trans 'Ваш заказ'%}-№
                 {{ order.id }} {% trans 'принят и обрабатывается. У вас есть 6 часов. для оплаты. После истечения этого времени заказ будет аннулирован. После подтверждения оплаты в рабочее время с вами свяжутся для уточнения доставки по телефону'%} {{ order.phone }}
               {% trans 'Приятного дня!'%} </span>
-{#            <span class="badge badge-secondary badge-pill">3</span>#}
+            <span class="badge badge-secondary badge-pill">3</span>
           </h5>
 
           <!-- Cart -->
           <ul class="list-group mb-3 z-depth-1">
 
           <li class="list-group-item d-flex justify-content-between">
-{#             {% for item in cart.cartitem_set.all %}#}
+
             <span>{%  trans 'Итого на сумму:'%} </span>
             <strong>
                  {{ a }} zł</strong>
@@ -87,7 +94,7 @@
 	var button = $ipsp.get('button');
 	button.setMerchantId(1396424);
 	button.setAmount({{ a }}, 'USD', true);
-	button.setResponseUrl('https://google.com');
+	button.setResponseUrl('http://levadadiesel.pythonanywhere.com/pl/');
 	button.setHost('api.fondy.eu');
 	button.addField({
 		label: 'ФИО',
