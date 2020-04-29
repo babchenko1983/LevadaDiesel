@@ -20,17 +20,13 @@
   <link href="{% static 'css/mdb.min.css'%}" rel="stylesheet">
   <!-- Your custom styles (optional) -->
   <link href="{% static 'css/style.min.css'%}" rel="stylesheet">
-  <link rel="stylesheet" href="{% static 'css/style.css'%}">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body class="grey lighten-3">
-<div class="intro">
-    <div class="video">
-    <video class="video__media" src="{% static '1.mp4' %}" autoplay muted loop></video>
 
 <!--Card content-->
           <!--Grid column-->
 <!--Main layout-->
+<div style=" background-color: #faf57b">
 
   <main class="mt-5 pt-4">
     <div class="container wow fadeIn">
@@ -103,9 +99,6 @@
 
                   <label for="zip">Zip Code</label>
                   {{form.postal_code}}
-{#                  <div class="invalid-feedback">#}
-{#                    Zip code required.#}
-{#                  </div>#}
 
                 </div>
                 <!--Grid column-->
@@ -115,9 +108,7 @@
 
                   <label for="zip">{%  trans 'Компания доставки'%}</label>
                   {{ form.delivery }}
-{#                  <div class="invalid-feedback">#}
-{#                    Zip code required.#}
-{#                  </div>#}
+
 
                 </div>
                 <!--Grid column-->
@@ -127,15 +118,13 @@
 
                   <label for="zip">{%  trans 'Контактный телефон'%}</label>
                  {{form.phone}}
-{#                  <div class="invalid-feedback">#}
-{#                  </div>#}
 
                 </div>
                 <!--Grid column-->
 
               </div>
               <!--Grid row-->
-{#              <hr class="mb-4">#}
+
               <button class="btn btn-primary btn-lg btn-block" type="submit">{%  trans 'Подтвердить'%}</button>
 
             </form>
@@ -198,10 +187,9 @@
     new WOW().init();
   </script>
     </div>
-</div>
-
 </body>
 </div>
+
 
 </html>
 
