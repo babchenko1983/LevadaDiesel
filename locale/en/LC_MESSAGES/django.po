@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-30 16:15+0300\n"
+"POT-Creation-Date: 2020-05-04 15:05+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1316,9 +1316,84 @@ msgstr ""
 "with the highest possible quality,appropriate to the quality of the new "
 "product."
 
+#: .\templates\contact.html:91
+msgid "Диагностика, обслуживание и восстановление дизельных составляющих"
+msgstr "Diagnostics, maintenance and restoration of diesel components"
+
+#: .\templates\contact.html:95
+msgid "Диагностика и ремонт Common Rail"
+msgstr "Common Rail Diagnostics and Repair"
+
+#: .\templates\contact.html:96
+msgid "Ремонт ТНВД"
+msgstr "Fuel pump repair"
+
+#: .\templates\contact.html:102
+msgid "Компьютерное диагностирование управляющих систем дизельных двигателей"
+msgstr "Computer diagnostics of diesel engine control systems"
+
+#: .\templates\contact.html:106
+msgid "Тестеры BOSCH KTS"
+msgstr "BOSCH KTS testers"
+
+#: .\templates\contact.html:107
+msgid "Ремонт Common Rail"
+msgstr "Common Rail Repair"
+
+#: .\templates\contact.html:113
+msgid "Диагностика и ремонтные работы по восстановлению насосов PDE и PLD"
+msgstr "Diagnostics and repair work on the restoration of PDE and PLD pumps"
+
+#: .\templates\contact.html:117
+msgid "Назначение нового IMA-кода"
+msgstr "Assigning a New IMA Code"
+
+#: .\templates\contact.html:118
+msgid "Многолетний опыт компании"
+msgstr "Many years of company experience"
+
+#: .\templates\contact.html:124
+
+msgid "Мы предоставляем широкий спектр услуг по самым конкурентным ценам!"
+msgstr "A wide range of high pressure fuel pumps, radial pumps, diesel "
+"injectors."
+
+#: .\templates\contact.html:128
+msgid "Качественные запчасти, узлы и агрегаты"
+msgstr "High-quality spare parts, components and assemblies"
+
+#: .\templates\contact.html:129
+msgid "Гарантийное обслуживание"
+msgstr "Warranty service"
+
+#: .\templates\contact.html:135
+msgid "Участие в семинарах ,  проводимыми  фирмами  BOSCH, DELPHI, DENSO ..."
+msgstr "Participation in seminars organized by BOSCH, DELPHI, DENSO"
+
+#: .\templates\contact.html:139
+
+msgid "Срочный ремонт"
+msgstr "Urgent repair"
+
+#: .\templates\contact.html:140
+msgid "Сотрудничество"
+msgstr "Cooperation"
+
 #: .\templates\contact.html:156
 msgid "Наши Контакты"
 msgstr "Our contacts"
+
+#: .\templates\contact.html:164
+msgid "Наш адрес"
+msgstr "Our address"
+
+#: .\templates\contact.html:172
+msgid "Напишите нам"
+msgstr "Write  us"
+
+#: .\templates\contact.html:180
+msgid "Позвоните нам"
+msgstr "Call us"
 
 #: .\templates\index.html:26
 msgid "Добро пожаловать в LevadaDieselService"
