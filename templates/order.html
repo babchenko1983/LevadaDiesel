@@ -1,20 +1,21 @@
+
 {#{% extends 'main.html' %}#}
 {% load static %}
 {% load crispy_forms_tags %}
 {% load i18n %}
-
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-
-</head>
-<body>
-
-<html lang="en">
-{% block content %}
-<div style=" background-color: #E0F8F7">
-<head>
+{##}
+{#<!doctype html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#  <meta charset="UTF-8">#}
+{##}
+{#</head>#}
+{#<body>#}
+{##}
+{#<html lang="en">#}
+{#{% block content %}#}
+{#<div style=" background-color: #E0F8F7">#}
+{#<head>#}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -27,104 +28,178 @@
   <link href="{% static 'css/mdb.min.css'%}" rel="stylesheet">
   <!-- Your custom styles (optional) -->
   <link href="{% static 'css/style.min.css'%}" rel="stylesheet">
-</head>
-<body class="grey lighten-3">
+<body>
+<!-- ======= Header ======= -->
+{#<header id="header" class="fixed-top">#}
+    <div class="container d-flex" >
 
-  <!--Main layout-->
-  <main class="mt-5 pt-4">
-    <div class="container wow fadeIn">
-
-      <!-- Heading -->
-      <h3 class="my-5 h1 text-center">{%  trans 'ОПЛАТА'%}</h3>
-
-      <!--Grid row-->
-      <div class="row">
-
-        <!--Grid column-->
-        <div class="col-md-4 mb-2">
-
-          <!--Card-->
-          <div class="card">
+        <div class="logo mr-auto">
 
 
-          </div>
-          <!--/.Card-->
+
+
+            <h1 class="text-light"><a href=""><span>Levada Diesel Service</span></a></h1>
 
         </div>
-        <!--Grid column-->
+        <div class="logo mr-auto">
+            <h7>{% trans '+48787364255 (Пон-Пят: 8:00-18:00 )'%}</h7>
+                <td><a href="{% url 'shop' %}"
+                       class="btn btn-warning btn-lg mb-2 ml-3">Вернуться в магазин</a></td>
+                    <h5 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-muted"> {% trans 'Уважаемый' %} <h4>{{ order.first_name }} {{ order.last_name }}!</h4>{% trans 'Ваш заказ' %}-№
+                {{ order.id }} {% trans 'принят и обрабатывается. У вас есть 6 часов. для оплаты. После истечения этого времени заказ будет аннулирован. После подтверждения оплаты в рабочее время с вами свяжутся для уточнения доставки по телефону' %} {{ order.phone }}
+              {% trans 'Приятного дня!' %} </span>
+            <span class="badge badge-secondary badge-pill"></span>
+        </h5>
 
-        <!--Grid column-->
-        <div class="col-md-4 mb-4" >
-
-          <!-- Heading -->
-          <h5 class="d-flex justify-content-between align-items-center mb-3">
-            <span class="text-muted" > {% trans 'Уважаемый'%} <h4>{{ order.first_name }} {{ order.last_name }}!</h4>{% trans 'Ваш заказ'%}-№
-                {{ order.id }} {% trans 'принят и обрабатывается. У вас есть 6 часов. для оплаты. После истечения этого времени заказ будет аннулирован. После подтверждения оплаты в рабочее время с вами свяжутся для уточнения доставки по телефону'%} {{ order.phone }}
-              {% trans 'Приятного дня!'%} </span>
-{#            <span class="badge badge-secondary badge-pill"></span>#}
-          </h5>
-
-          <!-- Cart -->
-          <ul class="list-group mb-3 z-depth-1">
-
-          <li class="list-group-item d-flex justify-content-between">
-
-            <span>{%  trans 'Итого на сумму:'%} </span>
-            <strong>
-                 {{ a }} zł</strong>
-{#                 {% endfor %}#}
-          </li>
-          </ul>
-            	<td><button onclick=" location.href=button.getUrl(); "  class="btn btn-success btn-md btn-block">{% trans 'Оплата' %}</button></td>
-          <!-- Cart -->
 
 
         </div>
-        <!--Grid column-->
 
-      </div>
-      <!--Grid row-->
+
+
+
 
     </div>
-  </main>
-  <!--Main layout-->
 
-    <script src="https://api.fondy.eu/static_common/v1/checkout/ipsp.js"></script>
+{#</header><!-- End Header -->#}
+
+<div id="checkout">
+
+
+    <div id="checkout_wrapper">
+
+    </div>
+
+
+</div>
+
+{#</head>#}
+{#<body class="grey lighten-3">#}
+{##}
+{#  <!--Main layout-->#}
+{#  <main class="mt-5 pt-4">#}
+{#    <div class="container wow fadeIn">#}
+{##}
+{#      <!-- Heading -->#}
+{#      <h3 class="my-5 h1 text-center">{%  trans 'ОПЛАТА'%}</h3>#}
+{##}
+{#      <!--Grid row-->#}
+{#      <div class="row">#}
+{##}
+{#        <!--Grid column-->#}
+{#        <div class="col-md-4 mb-2">#}
+{##}
+{#          <!--Card-->#}
+{#          <div class="card">#}
+{##}
+{##}
+{#          </div>#}
+{#          <!--/.Card-->#}
+{##}
+{#        </div>#}
+{#        <!--Grid column-->#}
+{##}
+{#        <!--Grid column-->#}
+{#        <div class="col-md-4 mb-4" >#}
+{##}
+{#          <!-- Heading -->#}
+{#          <h5 class="d-flex justify-content-between align-items-center mb-3">#}
+{#            <span class="text-muted" > {% trans 'Уважаемый'%} <h4>{{ order.first_name }} {{ order.last_name }}!</h4>{% trans 'Ваш заказ'%}-№#}
+{#                {{ order.id }} {% trans 'принят и обрабатывается. У вас есть 6 часов. для оплаты. После истечения этого времени заказ будет аннулирован. После подтверждения оплаты в рабочее время с вами свяжутся для уточнения доставки по телефону'%} {{ order.phone }}#}
+{#              {% trans 'Приятного дня!'%} </span>#}
+{#            <span class="badge badge-secondary badge-pill"></span>#}
+{#          </h5>#}
+{##}
+{#          <!-- Cart -->#}
+{#          <ul class="list-group mb-3 z-depth-1">#}
+{##}
+{#          <li class="list-group-item d-flex justify-content-between">#}
+{##}
+{#            <span>{%  trans 'Итого на сумму:'%} </span>#}
+{#            <strong>#}
+{#                 {{ a }} zł</strong>#}
+{#                 {% endfor %}#}
+{#          </li>#}
+{#          </ul>#}
+{#            	<td><button onclick=" location.href=button.getUrl(); "  class="btn btn-success btn-md btn-block">{% trans 'Оплата' %}</button></td>#}
+{#          <!-- Cart -->#}
+{##}
+{##}
+{#        </div>#}
+{#        <!--Grid column-->#}
+{##}
+{#      </div>#}
+{#      <!--Grid row-->#}
+{##}
+{#    </div>#}
+{#  </main>#}
+{#  <!--Main layout-->#}
+{##}
+{#    <script src="https://api.fondy.eu/static_common/v1/checkout/ipsp.js"></script>#}
+{#<script>#}
+{#	var button = $ipsp.get('button');#}
+{#	button.setMerchantId(1396424);#}
+{#	button.setAmount({{ a }}, 'USD', true);#}
+{#	button.setResponseUrl('http://levadadiesel.pythonanywhere.com/pl/');#}
+{#	button.setHost('api.fondy.eu');#}
+{#	button.addField({#}
+{#		label: 'ФИО',#}
+{#		name: '',#}
+{#		required: true#}
+{#	});#}
+{##}
+{#</script>#}
+{##}
+{##}
+{##}
+{##}
+{#  <!-- SCRIPTS -->#}
+{#  <!-- JQuery -->#}
+{#  <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js'%}"></script>#}
+{#  <!-- Bootstrap tooltips -->#}
+{#  <script type="text/javascript" src="{% static 'js/popper.min.js'%}"></script>#}
+{#  <!-- Bootstrap core JavaScript -->#}
+{#  <script type="text/javascript" src="{% static 'js/bootstrap.min.js'%}"></script>#}
+{#  <!-- MDB core JavaScript -->#}
+{#  <script type="text/javascript" src="{% static 'js/mdb.min.js'%}"></script>#}
+{#  <!-- Initializations -->#}
+{#  <script type="text/javascript">#}
+{#    // Animations initialization#}
+{#    new WOW().init();#}
+{#  </script>#}
+{#</body>#}
+{#</div>#}
+{##}
+{#</html>#}
+{##}
+{##}
+{#{% endblock content %}#}
+<script src="https://api.fondy.eu/static_common/v1/checkout/ipsp.js"></script>
 <script>
-	var button = $ipsp.get('button');
-	button.setMerchantId(1396424);
-	button.setAmount({{ a }}, 'USD', true);
-	button.setResponseUrl('http://levadadiesel.pythonanywhere.com/pl/');
-	button.setHost('api.fondy.eu');
-	button.addField({
-		label: 'ФИО',
-		name: '',
-		required: true
+function checkoutInit(url) {
+	$ipsp('checkout').scope(function() {
+		this.setCheckoutWrapper('#checkout_wrapper');
+		this.addCallback(__DEFAULTCALLBACK__);
+		this.action('show', function(data) {
+			$('#checkout_loader').remove();
+			$('#checkout').show();
+		});
+		this.action('hide', function(data) {
+			$('#checkout').hide();
+		});
+		this.action('resize', function(data) {
+			$('#checkout_wrapper').width(480).height(data.height);
+		});
+		this.loadUrl(url);
 	});
-
+};
+var button = $ipsp.get("button");
+button.setMerchantId(1396424);
+button.setAmount(10.99, 'USD', true);
+button.setHost('api.fondy.eu');
+checkoutInit(button.getUrl());
 </script>
 
 
 
-
-  <!-- SCRIPTS -->
-  <!-- JQuery -->
-  <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js'%}"></script>
-  <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="{% static 'js/popper.min.js'%}"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="{% static 'js/bootstrap.min.js'%}"></script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="{% static 'js/mdb.min.js'%}"></script>
-  <!-- Initializations -->
-  <script type="text/javascript">
-    // Animations initialization
-    new WOW().init();
-  </script>
-</body>
-</div>
-
-</html>
-
-
-{% endblock content %}

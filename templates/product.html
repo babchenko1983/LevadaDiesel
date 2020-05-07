@@ -58,7 +58,10 @@
         <ul class="navbar-nav nav-flex-icons">
           <li class="nav-item">
             <a href="{% url 'cart' %}"class="nav-link waves-effect">
+                {% if request.session %}
               <span class="badge red z-depth-1 mr-1">{{request.session.items_total}} </span>
+                   {% else %}
+                    {% endif %}
               <i class="fas fa-shopping-cart"></i>
               <span class="clearfix d-none d-sm-inline-block"> {% trans 'Корзина'%} </span>
 

@@ -30,12 +30,14 @@
 
   <main class="mt-5 pt-4">
     <div class="container wow fadeIn">
-{%  if form.is_valid %}
+
       <!-- Heading -->
       <h2 class="my-5 h2 text-center">{% trans 'Форма доставки'%}</h2>
-    {% else %}
-    <h2 class="my-5 h2 danger-color">{% trans 'Введите правильно поле Email'%}</h2>
+    {% if request.method == 'POST' and not form.is_valid %}
+
+      <h2 class="my-5 h2 danger-color">{% trans 'Введите правильно поле Email'%}</h2>
     {% endif %}
+
 
       <!--Grid row-->
       <div class="row">
