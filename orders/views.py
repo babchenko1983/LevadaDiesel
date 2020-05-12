@@ -22,12 +22,6 @@ def order_create(request):
 
             a = int(OrderItem.objects.all().last().total_price)
 
-            # try:
-            #     del request.session['cart_id']
-            # except KeyError:
-            #     pass
-            # cart.delete()
-
             return render(request, 'order.html',
                           {'order': order, 'a': a,
                            })
@@ -35,7 +29,6 @@ def order_create(request):
             form = OrderCreateForm
             return render(request, 'checkout.html',
                           {'cart': cart, 'form': form})
-
 
 
 

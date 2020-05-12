@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-04 15:05+0300\n"
+"POT-Creation-Date: 2020-05-12 13:13+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1223,49 +1223,49 @@ msgstr ""
 msgid "Форма доставки"
 msgstr "Formularz dostawy"
 
-#: .\templates\checkout.html:37
+#: .\templates\checkout.html:38
 msgid "Введите правильно поле Email"
 msgstr "Wpisz poprawnie adres e-mail"
 
-#: .\templates\checkout.html:62
+#: .\templates\checkout.html:64
 msgid "Имя"
 msgstr "Imię"
 
-#: .\templates\checkout.html:74
+#: .\templates\checkout.html:76
 msgid "Фамилия"
 msgstr "Nazwisko"
 
-#: .\templates\checkout.html:94
+#: .\templates\checkout.html:96
 msgid "Адрес доставки"
 msgstr "Adres dostawy"
 
-#: .\templates\checkout.html:112
+#: .\templates\checkout.html:114
 msgid "Компания доставки"
 msgstr "Firma spedycyjna"
 
-#: .\templates\checkout.html:122
+#: .\templates\checkout.html:124
 msgid "Контактный телефон"
 msgstr "Kontaktowy numer telefonu"
 
-#: .\templates\checkout.html:131
+#: .\templates\checkout.html:133
 msgid "Подтвердить"
 msgstr "Potwierdź"
 
-#: .\templates\checkout.html:146 .\templates\order.html:61
+#: .\templates\checkout.html:148 .\templates\order.html:36
 msgid "Ваш заказ"
 msgstr "Twoje zamówienie"
 
-#: .\templates\checkout.html:157 .\templates\product.html:109
+#: .\templates\checkout.html:159 .\templates\product.html:112
 #: .\templates\view.html:132
 msgid "шт"
 msgstr "szt"
 
-#: .\templates\checkout.html:162
+#: .\templates\checkout.html:164
 msgid "Итого:"
 msgstr "Razem:"
 
 #: .\templates\contact.html:39 .\templates\main.html:41
-#: .\templates\view.html:72
+#: .\templates\order.html:32 .\templates\view.html:72
 msgid "+48787364255 (Пон-Пят: 8:00-18:00 )"
 msgstr "+48787364255 (Pon-Pią: 8:00-18:00 )"
 
@@ -1273,8 +1273,9 @@ msgstr "+48787364255 (Pon-Pią: 8:00-18:00 )"
 msgid "Главная"
 msgstr "Strona główna"
 
-#: .\templates\contact.html:46 .\templates\main.html:48 .\templates\shop.html:5
-#: .\templates\shop.html:13 .\templates\shop1.html:5
+#: .\templates\contact.html:46 .\templates\contact.html:219
+#: .\templates\main.html:48 .\templates\shop.html:5 .\templates\shop.html:13
+#: .\templates\shop1.html:5
 msgid "Магазин"
 msgstr "Sklep"
 
@@ -1283,7 +1284,7 @@ msgid "Контакты"
 msgstr "Dane kontaktowe"
 
 #: .\templates\contact.html:50 .\templates\main.html:52
-#: .\templates\product.html:63 .\templates\view.html:83
+#: .\templates\product.html:66 .\templates\view.html:83
 msgid "Корзина"
 msgstr "Koszyk"
 
@@ -1371,7 +1372,6 @@ msgid "Участие в семинарах ,  проводимыми  фирм�
 msgstr "Udział w seminariach organizowanych przez BOSCH, DELPHI, DENSO ..."
 
 #: .\templates\contact.html:139
-
 msgid "Срочный ремонт"
 msgstr "Pilna naprawa"
 
@@ -1418,15 +1418,15 @@ msgstr "Do sklepu"
 msgid "Выбрать"
 msgstr "Wybierz"
 
-#: .\templates\order.html:38
-msgid "ОПЛАТА"
-msgstr "PŁATNOŚĆ"
+#: .\templates\order.html:34
+msgid "Вернуться на сайт"
+msgstr "Do strony internetowej"
 
-#: .\templates\order.html:61
+#: .\templates\order.html:36
 msgid "Уважаемый"
 msgstr "Drogi"
 
-#: .\templates\order.html:62
+#: .\templates\order.html:37
 msgid ""
 "принят и обрабатывается. У вас есть 6 часов. для оплаты. После истечения "
 "этого времени заказ будет аннулирован. После подтверждения оплаты в рабочее "
@@ -1437,17 +1437,9 @@ msgstr ""
 "w interesach czas skontaktuje się z Tobą w celu określenia dostawy przez "
 "telefon"
 
-#: .\templates\order.html:63
+#: .\templates\order.html:38
 msgid "Приятного дня!"
 msgstr "Miłego dnia!"
-
-#: .\templates\order.html:72
-msgid "Итого на сумму:"
-msgstr "Łączna kwota:"
-
-#: .\templates\order.html:78
-msgid "Оплата"
-msgstr "PŁATNOŚĆ"
 
 #: .\templates\product.html:45
 msgid "На главную"
@@ -1457,34 +1449,34 @@ msgstr "Strona główna"
 msgid "Вернуться к поиску"
 msgstr "Powrót do wyszukiwania"
 
-#: .\templates\product.html:99
+#: .\templates\product.html:102
 msgid "Описание"
 msgstr "Opis"
 
-#: .\templates\product.html:106
+#: .\templates\product.html:109
 #, fuzzy
 #| msgid "Цена:"
 msgid "Цена: "
 msgstr "Cena:"
 
-#: .\templates\product.html:109
+#: .\templates\product.html:112
 msgid "Всего в наличии:"
 msgstr "Dostępne ogółem:"
 
-#: .\templates\product.html:113
+#: .\templates\product.html:116
 msgid "В корзину"
 msgstr "Do koszyka"
 
-#: .\templates\product.html:117 .\templates\shop1.html:25
+#: .\templates\product.html:120 .\templates\shop1.html:25
 #: .\templates\view.html:19 .\templates\view.html:151
 msgid "Вернуться в магазин"
 msgstr "Powrót do sklepu"
 
-#: .\templates\product.html:136
+#: .\templates\product.html:139
 msgid "Также вы можете приобрести"
 msgstr "Możesz także dokonać zakupu"
 
-#: .\templates\product.html:138
+#: .\templates\product.html:141
 msgid ""
 "Стенды которые  позволяют выполнять процедуры, связанные с испытаниями и "
 "проверкой форсунок системы Common-Rail различных производителей (Bosch, "
@@ -1584,3 +1576,12 @@ msgstr "Razem:"
 #: .\templates\view.html:155
 msgid "Оформить"
 msgstr "Odprawa"
+
+#~ msgid "ОПЛАТА"
+#~ msgstr "PŁATNOŚĆ"
+
+#~ msgid "Итого на сумму:"
+#~ msgstr "Łączna kwota:"
+
+#~ msgid "Оплата"
+#~ msgstr "PŁATNOŚĆ"

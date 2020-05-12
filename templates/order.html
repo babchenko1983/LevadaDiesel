@@ -1,5 +1,4 @@
 
-
 {% load static %}
 {% load crispy_forms_tags %}
 {% load i18n %}
@@ -38,16 +37,15 @@
                  {% trans 'принят и обрабатывается. У вас есть 6 часов. для оплаты. После истечения этого времени заказ будет аннулирован. После подтверждения оплаты в рабочее время с вами свяжутся для уточнения доставки по телефону' %} {{ order.phone }}
               {% trans 'Приятного дня!' %} </em></span>
                 <span class="badge badge-secondary badge-pill"></span>
-                {{ a }}
+
             </h5>
+
 
         </div>
 
+
     </div>
-
-{#</header><!-- End Header -->#}
-
-<div id="checkout">
+        <div id="checkout">
 
 
     <div id="checkout_wrapper">
@@ -56,6 +54,12 @@
 
 
 </div>
+</body>
+
+{#</header><!-- End Header -->#}
+
+
+
 
 <script src="https://api.fondy.eu/static_common/v1/checkout/ipsp.js"></script>
 <script>
