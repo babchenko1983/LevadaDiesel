@@ -50,12 +50,7 @@
 
                 <li><a href="{% url 'cart' %}" class="nav-link waves-effect">
                     <span class="clearfix d-none d-sm-inline-block">{{ cart.total}} {% trans 'Корзина'%} </span>
-                    {% if request.session %}
                     <span class="badge red z-depth-1 mr-1"><h6>{{request.session.items_total}}</h6></span>
-                    {% else %}
-                    {% endif %}
-
-
 
                 </a>
 

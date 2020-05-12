@@ -20,7 +20,7 @@ def order_create(request):
                                          quantity=item.quantity,
                                          total_price=cart.total)
 
-            a = OrderItem.objects.all().last().total_price
+            a = int(OrderItem.objects.all().last().total_price)
 
             # try:
             #     del request.session['cart_id']
