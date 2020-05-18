@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-12 13:13+0300\n"
+"POT-Creation-Date: 2020-05-18 15:28+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1221,7 +1221,7 @@ msgstr ""
 
 #: .\templates\checkout.html:35
 msgid "Форма доставки"
-msgstr "Formularz dostawy"
+msgstr "Formular z dostawy"
 
 #: .\templates\checkout.html:38
 msgid "Введите правильно поле Email"
@@ -1247,20 +1247,28 @@ msgstr "Firma spedycyjna"
 msgid "Контактный телефон"
 msgstr "Kontaktowy numer telefonu"
 
-#: .\templates\checkout.html:133
+#: .\templates\checkout.html:134
+msgid "Я согласен с"
+msgstr "Zgadzam się"
+
+#: .\templates\checkout.html:134
+msgid "Политикой конфиденциальности"
+msgstr "Polityką prywatności"
+
+#: .\templates\checkout.html:140
 msgid "Подтвердить"
 msgstr "Potwierdź"
 
-#: .\templates\checkout.html:148 .\templates\order.html:36
+#: .\templates\checkout.html:155 .\templates\order.html:36
 msgid "Ваш заказ"
 msgstr "Twoje zamówienie"
 
-#: .\templates\checkout.html:159 .\templates\product.html:112
+#: .\templates\checkout.html:166 .\templates\product.html:112
 #: .\templates\view.html:132
 msgid "шт"
 msgstr "szt"
 
-#: .\templates\checkout.html:164
+#: .\templates\checkout.html:171
 msgid "Итого:"
 msgstr "Razem:"
 
@@ -1269,13 +1277,18 @@ msgstr "Razem:"
 msgid "+48787364255 (Пон-Пят: 8:00-18:00 )"
 msgstr "+48787364255 (Pon-Pią: 8:00-18:00 )"
 
-#: .\templates\contact.html:44 .\templates\main.html:7 .\templates\main.html:46
+#: .\templates\contact.html:44 .\templates\contact.html:265
+#: .\templates\main.html:7 .\templates\main.html:46 .\templates\main.html:102
+#: .\templates\order.html:81 .\templates\product.html:203
+#: .\templates\view.html:219
 msgid "Главная"
 msgstr "Strona główna"
 
-#: .\templates\contact.html:46 .\templates\contact.html:219
-#: .\templates\main.html:48 .\templates\shop.html:5 .\templates\shop.html:13
-#: .\templates\shop1.html:5
+#: .\templates\contact.html:46 .\templates\contact.html:266
+#: .\templates\contact.html:302 .\templates\main.html:48
+#: .\templates\main.html:103 .\templates\order.html:82
+#: .\templates\product.html:204 .\templates\shop.html:5
+#: .\templates\shop.html:13 .\templates\shop1.html:5 .\templates\view.html:220
 msgid "Магазин"
 msgstr "Sklep"
 
@@ -1367,33 +1380,98 @@ msgstr "Wysokiej jakości części zamienne, komponenty i zespoły"
 msgid "Гарантийное обслуживание"
 msgstr "Serwis gwarancyjny"
 
-#: .\templates\contact.html:135
+#: .\templates\contact.html:135 .\templates\contact.html:145
+#: .\templates\contact.html:155 .\templates\contact.html:165
 msgid "Участие в семинарах ,  проводимыми  фирмами  BOSCH, DELPHI, DENSO ..."
 msgstr "Udział w seminariach organizowanych przez BOSCH, DELPHI, DENSO ..."
 
-#: .\templates\contact.html:139
+#: .\templates\contact.html:139 .\templates\contact.html:149
+#: .\templates\contact.html:159 .\templates\contact.html:169
 msgid "Срочный ремонт"
 msgstr "Pilna naprawa"
 
-#: .\templates\contact.html:140
+#: .\templates\contact.html:140 .\templates\contact.html:150
+#: .\templates\contact.html:160 .\templates\contact.html:170
 msgid "Сотрудничество"
 msgstr "Współpraca"
 
-#: .\templates\contact.html:156
+#: .\templates\contact.html:186
 msgid "Наши Контакты"
 msgstr "Nasze kontakty"
 
-#: .\templates\contact.html:164
+#: .\templates\contact.html:194
 msgid "Наш адрес"
 msgstr "Nasz adres"
 
-#: .\templates\contact.html:172
+#: .\templates\contact.html:202
 msgid "Напишите нам"
 msgstr "Napisz do nas"
 
-#: .\templates\contact.html:180
+#: .\templates\contact.html:210
 msgid "Позвоните нам"
 msgstr "Zadzwoń do nas"
+
+#: .\templates\contact.html:256 .\templates\main.html:93
+#: .\templates\order.html:72 .\templates\product.html:194
+#: .\templates\view.html:210
+msgid "Phone"
+msgstr "Phone"
+
+#: .\templates\contact.html:263 .\templates\main.html:100
+#: .\templates\order.html:79 .\templates\product.html:201
+#: .\templates\view.html:217
+msgid "Информация"
+msgstr "Informacja"
+
+#: .\templates\contact.html:267 .\templates\main.html:104
+#: .\templates\order.html:83 .\templates\product.html:205
+#: .\templates\view.html:221
+msgid "Политика конфиденциальности"
+msgstr "Polityka prywatności"
+
+#: .\templates\contact.html:272 .\templates\main.html:109
+#: .\templates\order.html:88 .\templates\product.html:210
+#: .\templates\view.html:226
+msgid "Наш сервис"
+msgstr "Nasze usługi"
+
+#: .\templates\contact.html:274 .\templates\main.html:111
+#: .\templates\order.html:90 .\templates\product.html:212
+#: .\templates\view.html:228
+msgid "Продажа"
+msgstr "Sprzedaż"
+
+#: .\templates\contact.html:275 .\templates\main.html:112
+#: .\templates\order.html:91 .\templates\product.html:213
+#: .\templates\view.html:229
+msgid "Восстановление"
+msgstr "Poprawa"
+
+#: .\templates\contact.html:276 .\templates\main.html:113
+#: .\templates\order.html:92 .\templates\product.html:214
+#: .\templates\view.html:230
+#, fuzzy
+#| msgid "Ремонт ТНВД"
+msgid "Ремонт"
+msgstr "Naprawa pompy paliwa"
+
+#: .\templates\contact.html:281 .\templates\main.html:118
+#: .\templates\order.html:97 .\templates\product.html:219
+#: .\templates\view.html:235
+msgid "О нас"
+msgstr "O nas"
+
+#: .\templates\contact.html:282 .\templates\main.html:119
+#: .\templates\order.html:98 .\templates\product.html:220
+#: .\templates\view.html:236
+msgid ""
+"Мы предлагаем восстановленные форсунки Common Rail, насос-форсунки UIS / PDE "
+"и механические форсунки.Форсунки восстанавливаются исключительно с "
+"использованием оригинальных запасных частей."
+msgstr ""
+"„Oferujemy regenerowane wtryskiwacze Common Rail, wtryskiwacze z pompami "
+"UIS / PDE. i dysze mechaniczne. Dysze są przywracane wyłącznie z przy użyciu "
+"oryginalnych części zamiennych."
 
 #: .\templates\index.html:26
 msgid "Добро пожаловать в LevadaDieselService"
@@ -1441,6 +1519,134 @@ msgstr ""
 msgid "Приятного дня!"
 msgstr "Miłego dnia!"
 
+#: .\templates\policy.html:5
+msgid "ИНФОРМАЦИОННОЕ ПОЛОЖЕНИЕ"
+msgstr "KLAUZULA INFORMACYJNA "
+
+#: .\templates\policy.html:6
+msgid "Общество с ограниченной ответственностью"
+msgstr "Spόłki z ograniczoną odpowiedzialnością"
+
+#: .\templates\policy.html:7
+msgid ""
+"В соответствии с Регламентом (ЕС) 2016/679 Европейского парламента и Совета "
+"от 27 апреля 2016 года. Что касается защиты физических лиц в отношении "
+"обработки персональных данных и свободного перемещения таких данных («GDPR») "
+"и отмены Директивы 95/46 / EC, мы информируем вас о том, что:"
+msgstr ""
+" Zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z "
+"dnia 27 kwietnia 2016r. W sprawie ochrony osόb fizycznych w związku z "
+"przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich "
+"danych („RODO”) oraz uchylenia dyrektywy 95/46/WE informujemy,  że:"
+
+#: .\templates\policy.html:9
+msgid ""
+"1.Администратором ваших данных является LEVADIESEL PL sp.z o.o. со штаб-"
+"квартирой в 37-300 Leżajsk ul. Tomasza Michałka 33, внесен в Реестр "
+"предпринимателей Национального судебного реестра под номером 0000533982."
+msgstr ""
+"1. Administratorem Państwa danych jest LEVADIESEL PL sp. z o.o. z siedzibą  "
+"w     37-300 Leżajsk ul. Tomasza Michałka 33, wpisana do rejestru "
+"przedsiębiorcόw KRS pod numerem 0000533982"
+
+#: .\templates\policy.html:10
+msgid ""
+"2. Ваши личные данные будут обработаны с целью выставления счета-фактуры и "
+"надлежащего выполнения бухгалтерских и налоговых обязательств компанией "
+"LEVADADIESEL PL sp.z o.o.; Для получения дополнительной информации "
+"относительно обработки данных нами, вы можете связаться с нами по адресу "
+"slevada@gmail.com или письменно по адресу нашего офиса, указанному в пункте "
+"1."
+msgstr ""
+"2. Państwa dane osobowe będą przetwarzane w celu wystawienia faktury oraz "
+"prawidłowaego wykonywania obowiązków rachunkowo-podatkowych przez  "
+"LEVADADIESEL PL sp. z o.o.; W celu uzyskania dodatkowych informacji "
+"dotyczących przetwarzania przez nas danych mogą Państwo skontaktować się za "
+"pomocą adresu slevada@gmail.com lub pisemnie na adres naszej siedziby , "
+"wskazany w pkt.1"
+
+#: .\templates\policy.html:12
+msgid "3. Получатели данных."
+msgstr "Odbiorcy danych."
+
+#: .\templates\policy.html:13
+msgid ""
+"Только лица, уполномоченные LEVADADIESEL PL, будут иметь доступ к вашим "
+"данным: наши сотрудники и бухгалтерия \"Euro-Consult\" Sp. Z O.O. "
+"операционные ИТ-системы, в которых обрабатываются личные данные, связанные с "
+"выставлением счетов."
+msgstr ""
+"Dostęp do Państwa danych będą mieć wylącznie osoby upoważnione przez "
+"LEVADADIESEL PL : nasi pracownicy oraz biuro księgo-rachunkowe „Euro-"
+"Consult” Sp. z o.o. obsługujące systemy informatyczne, w których "
+"przetwarzane są dane osobowe związane z wystawianiem faktur."
+
+#: .\templates\policy.html:15
+msgid ""
+"4. Правовой основой для обработки данных является выполнение юридического "
+"обязательства, возложенного на Администратора, с указанием объема данных, "
+"которые должны быть включены в счет-фактуру."
+msgstr ""
+"4. Podstawą prawną przetwarzania danych jest wykonywanie obowiązku prawnego "
+"ciążącego na Administratorze, określającego zakres danych, które musi "
+"zawierać faktura."
+
+#: .\templates\policy.html:17
+msgid ""
+"5. Предоставление данных является добровольным, но необходимо для "
+"выставления счета. Если данные не предоставлены, договор не может быть "
+"заключен."
+msgstr ""
+"5. Podanie danych jest dobrowolne, jednak niezbędne do wystawienia faktury. "
+"W przypadku nie podania danych niemożliwe  jest zawarcie umowy. "
+
+#: .\templates\policy.html:19
+msgid ""
+"6.  Ваши данные будут храниться в течение 5 лет с конца года, в котором был "
+"выставлен счет."
+msgstr ""
+"6.  Państwa dane będą przechowywane przez 5 lat od końca roku, w którym "
+"została wystawiona faktura."
+
+#: .\templates\policy.html:21
+msgid "7. Вы имеете право:"
+msgstr "7.  Przysługuje Państwu prawo do:"
+
+#: .\templates\policy.html:22
+msgid ""
+"•  запрашивать доступ к персональным данным, исправление, удаление или "
+"ограничение обработки персональных данных;"
+msgstr ""
+"• żądania dostępu do danych osobowych, ich sprostowania, usunięcia lub "
+"ograniczenia przetwarzania danych osobowych;"
+
+#: .\templates\policy.html:23
+msgid "• а также право возражать против обработки и передачи данных;"
+msgstr ""
+"• a także prawo do wniesienia sprzeciwu wobec przetwarzania oraz do "
+"przeniesienia danych;"
+
+#: .\templates\policy.html:24
+msgid ""
+"• подача жалобы Начальнику Управления по защите персональных данных "
+"относительно обработки нами ваших персональных данных."
+msgstr ""
+"• wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych dotyczącej "
+"przetwarzania przez nas Państwa danych osobowych."
+
+#: .\templates\policy.html:26
+msgid ""
+"8. Ваши данные не будут использоваться для профилирования или принятия "
+"автоматических решений."
+msgstr ""
+"8. Państwa dane nie będą wykorzystywane do profilowania, ani podejmowania "
+"zautomatyzowanych decyzji."
+
+#: .\templates\policy.html:29 .\templates\product.html:120
+#: .\templates\shop1.html:25 .\templates\view.html:19 .\templates\view.html:151
+msgid "Вернуться в магазин"
+msgstr "Powrót do sklepu"
+
 #: .\templates\product.html:45
 msgid "На главную"
 msgstr "Strona główna"
@@ -1466,11 +1672,6 @@ msgstr "Dostępne ogółem:"
 #: .\templates\product.html:116
 msgid "В корзину"
 msgstr "Do koszyka"
-
-#: .\templates\product.html:120 .\templates\shop1.html:25
-#: .\templates\view.html:19 .\templates\view.html:151
-msgid "Вернуться в магазин"
-msgstr "Powrót do sklepu"
 
 #: .\templates\product.html:139
 msgid "Также вы можете приобрести"

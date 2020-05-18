@@ -15,6 +15,7 @@ class Order(models.Model):
     postal_code = models.CharField(max_length=20)
     address = models.CharField(max_length=250)
     delivery=models.CharField(max_length=100)
+    privacy=models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 

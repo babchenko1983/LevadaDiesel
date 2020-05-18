@@ -11,7 +11,6 @@ def order_create(request):
     if request.method == 'POST':
         form = OrderCreateForm(request.POST)
         if form.is_valid():
-            print('ok')
             order = form.save()
             for item in cart.cartitem_set.all():
                 OrderItem.objects.create(order=order,
@@ -33,7 +32,6 @@ def order_create(request):
 
 
     else:
-        print('no')
         form = OrderCreateForm
         return render(request, 'checkout.html',
                       {'cart': cart, 'form': form})
@@ -48,3 +46,6 @@ def back(request):
         pass
     cart.delete()
     return render(request, 'contact.html')
+
+def privacy_policy(request):
+    return render(request, 'policy.html')

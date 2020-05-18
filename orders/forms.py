@@ -2,11 +2,10 @@ from django import forms
 from .models import Order
 
 
-
 class OrderCreateForm(forms.ModelForm):
     class Meta:
         model = Order
-        fields = ['first_name', 'last_name', 'phone', 'email', 'postal_code', 'address', 'delivery', ]
+        fields = ['first_name', 'last_name', 'phone', 'email', 'postal_code', 'address', 'delivery', 'privacy']
         widgets = {'first_name': forms.TextInput(attrs={'class': 'form-control',
                                                         'placeholder': 'Serhii'}),
                    'last_name': forms.TextInput(attrs={'class': 'form-control',
@@ -22,4 +21,3 @@ class OrderCreateForm(forms.ModelForm):
                    'phone': forms.TextInput(attrs={'class': 'form-control',
                                                    'placeholder': '+48787364255'}),
                    }
-

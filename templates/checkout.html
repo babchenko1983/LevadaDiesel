@@ -128,6 +128,13 @@
                 <!--Grid column-->
 
               </div>
+                <hr>
+              <div class="custom-control custom-checkbox">
+                  {{ form.privacy }}
+                  <label for="same-address">{%  trans 'Я согласен с'%} <a href="{% url 'policy' %}">{% trans 'Политикой конфиденциальности'%}</a></label>
+              </div>
+
+              <hr>
               <!--Grid row-->
 
               <button class="btn btn-primary btn-lg btn-block" type="submit">{%  trans 'Подтвердить'%}</button>
