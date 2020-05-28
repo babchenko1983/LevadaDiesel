@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-18 15:28+0300\n"
+"POT-Creation-Date: 2020-05-28 14:33+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1270,31 +1270,31 @@ msgstr "ps."
 msgid "Итого:"
 msgstr "Total"
 
-#: .\templates\contact.html:39 .\templates\main.html:41
+#: .\templates\contact.html:39 .\templates\main.html:42
 #: .\templates\order.html:32 .\templates\view.html:72
 msgid "+48787364255 (Пон-Пят: 8:00-18:00 )"
 msgstr "+48787364255 (Mon-Fri: 8:00-18:00 )"
 
-#: .\templates\contact.html:44 .\templates\contact.html:265
-#: .\templates\main.html:7 .\templates\main.html:46 .\templates\main.html:102
-#: .\templates\order.html:81 .\templates\product.html:203
-#: .\templates\view.html:219
+#: .\templates\contact.html:44 .\templates\contact.html:325
+#: .\templates\main.html:8 .\templates\main.html:47 .\templates\main.html:114
+#: .\templates\order.html:92 .\templates\product.html:214
+#: .\templates\view.html:230
 msgid "Главная"
 msgstr "Main"
 
-#: .\templates\contact.html:46 .\templates\contact.html:266
-#: .\templates\contact.html:302 .\templates\main.html:48
-#: .\templates\main.html:103 .\templates\order.html:82
-#: .\templates\product.html:204 .\templates\shop.html:5
-#: .\templates\shop.html:13 .\templates\shop1.html:5 .\templates\view.html:220
+#: .\templates\contact.html:46 .\templates\contact.html:326
+#: .\templates\contact.html:361 .\templates\main.html:49
+#: .\templates\main.html:115 .\templates\order.html:93
+#: .\templates\product.html:215 .\templates\shop.html:5
+#: .\templates\shop.html:13 .\templates\shop1.html:5 .\templates\view.html:231
 msgid "Магазин"
 msgstr "Store"
 
-#: .\templates\contact.html:47 .\templates\main.html:49
+#: .\templates\contact.html:47 .\templates\main.html:50
 msgid "Контакты"
 msgstr "Contacts"
 
-#: .\templates\contact.html:50 .\templates\main.html:52
+#: .\templates\contact.html:50 .\templates\main.html:53
 #: .\templates\product.html:66 .\templates\view.html:83
 msgid "Корзина"
 msgstr "Cart"
@@ -1305,164 +1305,282 @@ msgstr "Our company"
 
 #: .\templates\contact.html:76
 msgid ""
-"LevadaDieselService является специалистом в восстановленнии запасных частей. "
-"Мы предлагаем широкий спектр ТНВД, радиальных насосов, дизельных форсунок, "
-"турбокомпрессоров, электронных блоков управления, гидравлических и "
+"LEVADADIESEL PL Sp. z o.o  является специалистом в восстановленнии запасных "
+"частей. Мы предлагаем широкий спектр ТНВД, радиальных насосов, дизельных "
+"форсунок, турбокомпрессоров, электронных блоков управления, гидравлических и "
 "механических компонентов управления, гидроусилителя руля, генераторов, "
 "стартеров, клапанов EGR и другой продукции. Для восстановления и проверки "
 "нашей продукции мы используем тестовое оборудование, специально "
 "разработанное производителями. Любой замененный компонент, был протестирован "
 "в течение длительного времени и рекомендован производителем запасной части. "
 "Уникальный подход к процессу восстановления запасной части означает, что мы "
-"предоставляем 24-х месячную гарантию почти на весь наш ассортимент. Мы "
+"предоставляем 12-ти месячную гарантию почти на весь наш ассортимент. Мы "
 "восстанавливаем нашу продукцию с максимально возможным качеством, "
 "соответствующим качеству нового продукта."
 msgstr ""
-"LevadaDieselService is a specialist in the repair of spare parts.We offer a "
-"wide range of high pressure fuel pumps, radial pumps, diesel injectors,"
-"turbochargers, electronic control units, hydraulic andmechanical control "
-"components, power steering, generators,starters, EGR valves and other "
-"products. For recovery and inspectionWe use test equipment specifically for "
-"our productsDeveloped by manufacturers. Any replaced component has been "
-"tested.for a long time and recommended by the manufacturer of the spare part."
-"A unique approach to the spare part recovery process means that weWe provide "
-"a 24-month warranty on almost our entire range. Werestoring our products "
-"with the highest possible quality,appropriate to the quality of the new "
-"product."
+"LEVADADIESEL PL Sp. z o.o is a specialist in the repair of spare parts.We "
+"offer a wide range of high pressure fuel pumps, radial pumps, diesel "
+"injectors,turbochargers, electronic control units, hydraulic andmechanical "
+"control components, power steering, generators,starters, EGR valves and "
+"other products. For recovery and inspectionWe use test equipment "
+"specifically for our productsDeveloped by manufacturers. Any replaced "
+"component has been tested.for a long time and recommended by the "
+"manufacturer of the spare part.A unique approach to the spare part recovery "
+"process means that weWe provide a 12-month warranty on almost our entire "
+"range. Werestoring our products with the highest possible quality,"
+"appropriate to the quality of the new product."
 
-#: .\templates\contact.html:91
+#: .\templates\contact.html:93
 msgid "Диагностика, обслуживание и восстановление дизельных составляющих"
 msgstr "Diagnostics, maintenance and restoration of diesel components"
 
-#: .\templates\contact.html:95
+#: .\templates\contact.html:97
 msgid "Диагностика и ремонт Common Rail"
 msgstr "Common Rail Diagnostics and Repair"
 
-#: .\templates\contact.html:96
+#: .\templates\contact.html:98
 msgid "Ремонт ТНВД"
 msgstr "Fuel pump repair"
 
-#: .\templates\contact.html:102
+#: .\templates\contact.html:104
 msgid "Компьютерное диагностирование управляющих систем дизельных двигателей"
 msgstr "Computer diagnostics of diesel engine control systems"
 
-#: .\templates\contact.html:106
+#: .\templates\contact.html:108
 msgid "Тестеры BOSCH KTS"
 msgstr "BOSCH KTS testers"
 
-#: .\templates\contact.html:107
+#: .\templates\contact.html:109
 msgid "Ремонт Common Rail"
 msgstr "Common Rail Repair"
 
-#: .\templates\contact.html:113
+#: .\templates\contact.html:115
 msgid "Диагностика и ремонтные работы по восстановлению насосов PDE и PLD"
 msgstr "Diagnostics and repair work on the restoration of PDE and PLD pumps"
 
-#: .\templates\contact.html:117
+#: .\templates\contact.html:119
 msgid "Назначение нового IMA-кода"
 msgstr "Assigning a New IMA Code"
 
-#: .\templates\contact.html:118
+#: .\templates\contact.html:120
 msgid "Многолетний опыт компании"
 msgstr "Many years of company experience"
 
-#: .\templates\contact.html:124
+#: .\templates\contact.html:126
 msgid "Мы предоставляем широкий спектр услуг по самым конкурентным ценам!"
 msgstr ""
 "A wide range of high pressure fuel pumps, radial pumps, diesel injectors."
 
-#: .\templates\contact.html:128
+#: .\templates\contact.html:130
 msgid "Качественные запчасти, узлы и агрегаты"
 msgstr "High-quality spare parts, components and assemblies"
 
-#: .\templates\contact.html:129
+#: .\templates\contact.html:131
 msgid "Гарантийное обслуживание"
 msgstr "Warranty service"
 
-#: .\templates\contact.html:135 .\templates\contact.html:145
-#: .\templates\contact.html:155 .\templates\contact.html:165
+#: .\templates\contact.html:137 .\templates\contact.html:147
+#: .\templates\contact.html:157 .\templates\contact.html:167
 msgid "Участие в семинарах ,  проводимыми  фирмами  BOSCH, DELPHI, DENSO ..."
 msgstr "Participation in seminars organized by BOSCH, DELPHI, DENSO"
 
-#: .\templates\contact.html:139 .\templates\contact.html:149
-#: .\templates\contact.html:159 .\templates\contact.html:169
+#: .\templates\contact.html:141 .\templates\contact.html:151
+#: .\templates\contact.html:161 .\templates\contact.html:171
 msgid "Срочный ремонт"
 msgstr "Urgent repair"
 
-#: .\templates\contact.html:140 .\templates\contact.html:150
-#: .\templates\contact.html:160 .\templates\contact.html:170
+#: .\templates\contact.html:142 .\templates\contact.html:152
+#: .\templates\contact.html:162 .\templates\contact.html:172
 msgid "Сотрудничество"
 msgstr "Cooperation"
 
 #: .\templates\contact.html:186
+msgid "Доставка"
+msgstr "Delivery "
+
+#: .\templates\contact.html:195
+msgid ""
+" Доставка осуществляется по тарифу транспортной компании, которую вы "
+"выбираете за счет клиента. Время доставки зависит от желаемого товара. "
+"Пожалуйста, проверьте статус интересующего вас продукта на его веб-сайте. "
+"Нет доставки в праздничные дни. Забрать товар возможно самому по адресу "
+"Wolanowska 135/B, Radom, Poland 26-601"
+msgstr "Delivery is carried out at the tariff of the transport company, which you choose at the expense of the client. Delivery time depends on the desired item. Please check the status of the product you are interested in on its website. No delivery on holidays. You can pick up the goods yourself at Wolanowska 135 / B, Radom, Poland 26-601"
+
+#: .\templates\contact.html:198
+msgid "По любым вопросам доставки и оплаты звоните"
+msgstr "For any questions of delivery and payment, call"
+
+#: .\templates\contact.html:214
+msgid "Гарантии и жалобы"
+msgstr "Warranties and complaints"
+
+#: .\templates\contact.html:215
+msgid ""
+" В соответствии с Законом о правах потребителя от 30 мая 2014 года "
+"покупатель имеет 14 дней с даты получения товара, чтобы отправить заявление "
+"об отказе от договора, а если продавец не сообщил о праве на отзыв - 12 "
+"месяцев.Возврат товара потребителем должен быть осуществлен немедленно, не "
+"позднее, чем в течение 14 календарных дней с даты отправки выписки, как и "
+"возврат Продавцом. Однако продавец может воздержаться от возврата средств до "
+"получения товара.Покупатели, которые запросили торговый документ в форме "
+"счета-фактуры с НДС с налоговым идентификационным номером, не имеют права на "
+"возмещение, если нет оснований для возмещения."
+msgstr "Pursuant to the Act on consumer rights of 30 May 2014, the buyer has 14 days from the date of receipt of the goods to send a statement of withdrawal from the contract, and if the seller has not informed about the right to withdraw - 12 months.The return of the item by the consumer should take place immediately, not later than within 14 calendar days from the date of sending the statement, as should the refund by the Seller. The seller may, however, refrain from returning the funds until receipt of the item."
+
+#: .\templates\contact.html:216
+msgid ""
+"1. Товары, возвращенные Покупателем, должны быть упакованы надлежащим "
+"образом, чтобы не было повреждений при транспортировке. Товар возвращается в "
+"оригинальной упаковке с полным комплектом оборудования и аксессуаров, а "
+"также с документами, выданными при его продаже. Возвращенный товар не может "
+"иметь никаких признаков использования и не может иметь механических "
+"повреждений."
+msgstr "1. The goods returned by the Consumer should be packed in an appropriate manner, ensuring no damage during transport. Goods returned in the original packaging with complete equipment and accessories as well as documents issued upon its sale. Returned goods cannot bear any signs of use and cannot have mechanical damage."
+
+#: .\templates\contact.html:217
+msgid ""
+"2. Контракт считается недействительным, и потребитель несет ответственность "
+"за снижение стоимости вещей в результате использования его таким образом, "
+"который выходит за рамки того, что необходимо для установления характера, "
+"характеристик и функционирования вещей."
+msgstr "2. The contract is considered null and void, and the consumer is responsible for reducing the value of things as a result of using it in a way that goes beyond what is necessary to establish the nature, characteristics and functioning of things."
+
+#: .\templates\contact.html:218
+msgid ""
+"3. Расходы по прямому возврату (возврату) товара Продавцу в связи с выходом "
+"из договора без объяснения причин в течение 14 дней с даты поставки товара, "
+"несет потребитель."
+msgstr "3. The costs of direct sending (returning) of the goods to the Seller in connection with the withdrawal from the contract without giving a reason within 14 days from the date of delivery of the goods shall be borne by the consumer."
+
+#: .\templates\contact.html:219
+msgid ""
+"4. Если потребитель выбрал способ доставки, отличный от самого дешевого "
+"обычного способа доставки, предлагаемого трейдером, трейдер не обязан "
+"возмещать потребителю дополнительные расходы, понесенные им."
+msgstr "4. If the consumer has chosen a method of delivery other than the cheapest regular delivery method offered by the entrepreneur, the entrepreneur is not obliged to reimburse the consumer for the additional costs incurred by him."
+
+#: .\templates\contact.html:220
+msgid ""
+"5. В случае повреждения, обнаруженного при транспортировке, должен быть "
+"составлен отчет о повреждении. Для этого, пожалуйста, свяжитесь с курьерской "
+"компанией DHL (тел. 42 6 345 345) - клиент назначает индивидуальную встречу "
+"с курьером, чтобы записать отчет о повреждениях. Отчет может быть написан до "
+"7 календарных дней с момента получения груза. Пожалуйста, отправьте "
+"отсканированный отчет о повреждениях вместе с формой возврата на адрес "
+"электронной почты."
+msgstr "5. In the event of damage found during transport, a damage report must be made. For this purpose, please contact the DHL courier company (tel. 42 6 345 345) - the customer makes an individual appointment with the courier to write down a damage report. The report can be written up to 7 calendar days from receipt of the shipment. Please send a scan of the damage report along with the return form to the email address."
+
+#: .\templates\contact.html:221
+msgid ""
+"6. Возврат взаимной выгоды должен произойти немедленно, не позднее, чем в "
+"течение 14 дней с момента выхода из договора. Если у вас есть вопросы или "
+"проблемы, пожалуйста, свяжитесь с нами по электронной почте или телефону ."
+msgstr "6. Return of mutual benefits should take place immediately, not later than within 14 days of withdrawal from the contract. If you have questions or concerns, please contact us by email or phone."
+
+#: .\templates\contact.html:222
+msgid "Образец формы вывода"
+msgstr "Sample withdrawal form"
+
+#: .\templates\contact.html:224
+msgid ""
+"Покупатель может подать жалобу продавцу в отношении заключенного договора по "
+"электронной почте или письменно на адрес продавца, во время телефонного "
+"разговора или лично.Правильно поданная жалоба должна содержать как минимум: "
+"имя, фамилию, адрес, адрес электронной почты или номер телефона Покупателя, "
+"дату заключения договора, являющегося основанием для жалобы, предмет жалобы, "
+"с указанием запроса Покупателя, все обстоятельства, обосновывающие жалобу. "
+"Если данные или информация, представленные в жалобе, необходимо дополнить, "
+"перед рассмотрением жалобы продавец просит лицо, подавшее жалобу, дополнить "
+"ее в указанном объеме. Продавец признает жалобу в течение 14 дней с даты ее "
+"получения в правильной форме. Ответ на жалобу отправляется на адрес "
+"электронной почты, указанный Покупателем, или на традиционный почтовый "
+"адрес. На каждом этапе продавец обязуется связываться с покупателем и, в "
+"случае необходимости, обсуждать дальнейшие действия."
+msgstr "The buyer may file a complaint to the seller regarding the concluded contract by e-mail or in writing to the seller’s address, during a telephone conversation or in person.A correctly submitted complaint should contain at least: name, surname, address, e-mail address or telephone number of the Buyer, date of conclusion of the contract constituting the basis for the complaint, subject of the complaint, indicating the Buyer's request, all circumstances justifying the complaint. If the data or information provided in the complaint need to be supplemented, before considering the complaint, the seller asks the person submitting the complaint to supplement it in the indicated scope. The seller recognizes the complaint within 14 days from the date of receipt in correct form. The response to the complaint is sent to the e-mail address provided by the Buyer or to the traditional postal address. At each stage, the seller undertakes to contact the customer and if there is a need to discuss further proceedings."
+
+#: .\templates\contact.html:238
 msgid "Наши Контакты"
 msgstr "Our contacts"
 
-#: .\templates\contact.html:194
+#: .\templates\contact.html:246
 msgid "Наш адрес"
 msgstr "Our address"
 
-#: .\templates\contact.html:202
+#: .\templates\contact.html:254
 msgid "Напишите нам"
 msgstr "Write  us"
 
-#: .\templates\contact.html:210
+#: .\templates\contact.html:262
 msgid "Позвоните нам"
 msgstr "Call us"
 
-#: .\templates\contact.html:256 .\templates\main.html:93
-#: .\templates\order.html:72 .\templates\product.html:194
-#: .\templates\view.html:210
+#: .\templates\contact.html:305 .\templates\contact.html:316
+#: .\templates\main.html:94 .\templates\main.html:105 .\templates\order.html:72
+#: .\templates\order.html:83 .\templates\product.html:194
+#: .\templates\product.html:205 .\templates\view.html:210
+#: .\templates\view.html:221
 msgid "Phone"
 msgstr "Phone"
 
-#: .\templates\contact.html:263 .\templates\main.html:100
+#: .\templates\contact.html:312 .\templates\main.html:101
 #: .\templates\order.html:79 .\templates\product.html:201
 #: .\templates\view.html:217
+msgid "Оплата"
+msgstr "Payment"
+
+#: .\templates\contact.html:313 .\templates\main.html:102
+#: .\templates\order.html:80 .\templates\product.html:202
+#: .\templates\view.html:218
+msgid "Оплата наложенным платежом"
+msgstr "Cash on delivery"
+
+#: .\templates\contact.html:323 .\templates\main.html:112
+#: .\templates\order.html:90 .\templates\product.html:212
+#: .\templates\view.html:228
 msgid "Информация"
 msgstr "Information"
 
-#: .\templates\contact.html:267 .\templates\main.html:104
-#: .\templates\order.html:83 .\templates\product.html:205
-#: .\templates\view.html:221
+#: .\templates\contact.html:327 .\templates\main.html:116
+#: .\templates\order.html:94 .\templates\product.html:216
+#: .\templates\view.html:232
 msgid "Политика конфиденциальности"
 msgstr "Privacy Policy"
 
-#: .\templates\contact.html:272 .\templates\main.html:109
-#: .\templates\order.html:88 .\templates\product.html:210
-#: .\templates\view.html:226
+#: .\templates\contact.html:332 .\templates\main.html:121
+#: .\templates\order.html:99 .\templates\product.html:221
+#: .\templates\view.html:237
 msgid "Наш сервис"
 msgstr "Our service"
 
-#: .\templates\contact.html:274 .\templates\main.html:111
-#: .\templates\order.html:90 .\templates\product.html:212
-#: .\templates\view.html:228
+#: .\templates\contact.html:334 .\templates\main.html:123
+#: .\templates\order.html:101 .\templates\product.html:223
+#: .\templates\view.html:239
 msgid "Продажа"
 msgstr "Sale"
 
-#: .\templates\contact.html:275 .\templates\main.html:112
-#: .\templates\order.html:91 .\templates\product.html:213
-#: .\templates\view.html:229
+#: .\templates\contact.html:335 .\templates\main.html:124
+#: .\templates\order.html:102 .\templates\product.html:224
+#: .\templates\view.html:240
 msgid "Восстановление"
 msgstr "Recovery"
 
-#: .\templates\contact.html:276 .\templates\main.html:113
-#: .\templates\order.html:92 .\templates\product.html:214
-#: .\templates\view.html:230
-#, fuzzy
-#| msgid "Ремонт ТНВД"
-msgid "Ремонт"
-msgstr "Fuel pump repair"
+#: .\templates\contact.html:336 .\templates\main.html:125
+#: .\templates\order.html:103 .\templates\product.html:225
+#: .\templates\view.html:241
 
-#: .\templates\contact.html:281 .\templates\main.html:118
-#: .\templates\order.html:97 .\templates\product.html:219
-#: .\templates\view.html:235
+msgid "Ремонт"
+msgstr "Repair"
+
+#: .\templates\contact.html:341 .\templates\main.html:130
+#: .\templates\order.html:108 .\templates\product.html:230
+#: .\templates\view.html:246
 msgid "О нас"
 msgstr "About us"
 
-#: .\templates\contact.html:282 .\templates\main.html:119
-#: .\templates\order.html:98 .\templates\product.html:220
-#: .\templates\view.html:236
+#: .\templates\contact.html:342 .\templates\main.html:131
+#: .\templates\order.html:109 .\templates\product.html:231
+#: .\templates\view.html:247
 msgid ""
 "Мы предлагаем восстановленные форсунки Common Rail, насос-форсунки UIS / PDE "
 "и механические форсунки.Форсунки восстанавливаются исключительно с "
@@ -1473,8 +1591,8 @@ msgstr ""
 "spare parts."
 
 #: .\templates\index.html:26
-msgid "Добро пожаловать в LevadaDieselService"
-msgstr "Welcome to LevadaDieselService"
+msgid "Добро пожаловать в LEVADADIESEL PL Sp. z o.o "
+msgstr "Welcome to LEVADADIESEL PL Sp. z o.o "
 
 #: .\templates\index.html:27
 msgid ""
@@ -1778,6 +1896,3 @@ msgstr "Checkout"
 
 #~ msgid "Итого на сумму:"
 #~ msgstr "Total price:"
-
-#~ msgid "Оплата"
-#~ msgstr "Payment"
