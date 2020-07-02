@@ -15,7 +15,7 @@ class OrderCreateForm(forms.ModelForm):
                    'address': forms.TextInput(attrs={'class': 'form-control',
                                                      'placeholder': 'Wolanowska 135/B, Radom, Poland'}),
                    'delivery': forms.TextInput(attrs={'class': 'form-control',
-                                                      'placeholder': '"DHL" or "FedEx"....'}),
+                                                      'placeholder': '"DHL" or "DPD"....'}),
                    'postal_code': forms.TextInput(attrs={'class': 'form-control',
                                                          'placeholder': '26-601'}),
                    'phone': forms.TextInput(attrs={'class': 'form-control',

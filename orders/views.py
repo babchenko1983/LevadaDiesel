@@ -7,7 +7,6 @@ from carts.views import Cart
 def order_create(request):
     the_id = request.session['cart_id']
     cart = Cart.objects.get(id=the_id)
-
     if request.method == 'POST':
         form = OrderCreateForm(request.POST)
         if form.is_valid():
@@ -35,6 +34,7 @@ def order_create(request):
         form = OrderCreateForm
         return render(request, 'checkout.html',
                       {'cart': cart, 'form': form})
+
 
 
 def back(request):

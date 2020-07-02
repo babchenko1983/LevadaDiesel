@@ -2,6 +2,20 @@
 {% load static %}
 {% load i18n %}
 {#{% load crispy_forms_tags %}#}
+{% if empty %}
+
+<div style=" background-color: #ffc7a1">
+
+
+    {% get_current_language as LANGUAGE_CODE %}
+    {% if LANGUAGE_CODE == 'ru' %}
+            <h1 style="text-align: center">Ваша корзина пуста</h1>
+        {% elif LANGUAGE_CODE == 'en' %}
+        <h1 style="text-align: center">Your Cart is empty</h1>
+        {% else  %}
+        <h1 style="text-align: center">Twój koszyk jest pusty</h1>
+
+    {% endif %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -206,4 +220,7 @@
 </html>
 
 
+
+
 {% endblock content %}
+    {% endif %}

@@ -39,7 +39,7 @@
 
         </div>
         <div class="logo mr-auto">
-            <h7>{% trans '+48787364255 (Пон-Пят: 8:00-18:00 )'%}</h7>
+            <h7>{% trans '+48888315230 (Пон-Пят: 8:00-18:00 )'%}</h7>
         </div>
 
         <nav class="nav-menu d-none d-lg-block">
@@ -47,7 +47,7 @@
                 <li class="active"><a href="{% url 'home' %}">{% trans 'Главная' %}</a></li>
 
                 <li><a href="{% url 'shop' %}">{% trans 'Магазин'%}</a></li>
-                <li><a href="{% url 'contact' %}">{% trans 'Контакты'%}</a></li>
+{#                <li><a href="{% url 'contact' %}">{% trans 'Контакты'%}</a></li>#}
 
                 <li><a href="{% url 'cart' %}" class="nav-link waves-effect">
                     <span class="clearfix d-none d-sm-inline-block">{{ cart.total}} {% trans 'Корзина'%} </span>
@@ -89,10 +89,13 @@
             <div class="footer-info" data-aos="fade-up" data-aos-delay="50">
               <h3>LEVADADIESEL PL Sp. z o.o </h3>
               <p>
-                Wolanowska 135/B<br>
-                Radom, Poland 26-601<br><br>
-                <strong>{% trans 'Phone'%}:</strong> +48787364255<br>
-                <strong>Email:</strong> slevada@gmail.com<br>
+                  <strong>{% trans 'Адрес местонахождения'%}</strong>
+                  <p>Wolanowska 135/B, 26-601, Radom, Poland<br>
+                     <p>
+                <strong>{% trans 'Адрес юридический'%}</strong>
+                  <p>ul. Tomasza Michałka 33,  37-300  Leżajsk, Polska  NIP: 8161703308
+                <p><strong>{% trans 'Телефон'%}:</strong> +48888315230<br>
+                <strong>Email:</strong>  levadadieselpl@gmail.com<br>
               </p>
             </div>
           </div>
@@ -102,7 +105,7 @@
               <p>1. {% trans 'Оплата наложенным платежом' %}<br>
                 2.  <img class="img-fluid" src="{% static 'Mastercard-Rebrand-Logo.jpg' %}"><img class="img-fluid" src="{% static 'VISA_Logo.svg.png' %}"><br><br>
 
-                <strong>{% trans 'Phone'%}:</strong> +48787364255<br>
+                <strong>{% trans 'Phone'%}:</strong> +48888315230<br>
 
               </p>
             </div>
@@ -120,9 +123,9 @@
           <div class="col-lg-2 col-md-6 footer-links" data-aos="fade-up" data-aos-delay="250">
             <h4>{% trans 'Наш сервис' %}</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="">{% trans 'Продажа' %}</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="">{% trans 'Восстановление' %}</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="">{% trans 'Ремонт' %}</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a>{% trans 'Продажа' %}</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a>{% trans 'Восстановление' %}</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a>{% trans 'Ремонт' %}</a></li>
             </ul>
           </div>
 
