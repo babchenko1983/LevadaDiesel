@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-02 16:14+0300\n"
+"POT-Creation-Date: 2020-10-08 18:19+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1317,18 +1317,12 @@ msgid ""
 "Предварительная калькуляция ремонта. Ремонт по желанию клиента. Оплата по "
 "окончанию ремонта."
 msgstr ""
-"LEVADADIESEL PL Sp. z o.o. zapewnia pełen zakres usług naprawy układów "
-"paliwowych silników Diesla - naprawiamy, odnawiamy, testujemy, myjemy i "
-"uszczelniamy. Doświadczenie naszej firmy w dziedzinie naprawy urządzeń "
-"diesla od ponad 10 lat. Znajdujemy się w Radomiu na Mazowszu w Polsce. "
-"Naprawiamy urządzenia Bosch. W pracy używamy tylko oryginalnych części "
-"zamiennych. Indywidualne podejście do każdego klienta. Firma zapewnia 12-"
-"miesięczną gwarancję na prawie cały nasz asortyment. Wieloletnia praca, "
-"doświadczenie i specjalistyczna wiedza sprawiły, że obecnie świadczymy "
-"usługi na najwyższym poziomie, jak przebiega praca? Omówienie możliwych "
-"przyczyn i okoliczności awarii. Sprawdzanie i rozwiązywanie problemów. "
-"Wstępne obliczenie naprawy Naprawa na życzenie klienta. Płatność po "
-"zakończeniu naprawy."
+"LEVADADIESEL PL sp.z o.o. zapewnia pełen zakres usług w zakresie naprawy układów paliwowych w silnikach"
+" diesla. Nasza firma specjalizuje się w regeneracji wtryskiwaczy oraz pomp wtryskowych układu paliwowego"
+" wszystkich producentów. Wieloletnie doświadczenie i wiedza sprawiły, że świadczymy usługi na najwyższym"
+" poziomie co potwierdzić mogą nasi zadowoleni klienci. Dzięki zapleczu maszynowemu najwyższej jakości firmy"
+" BOSCH naprawy przez nas wykonywane są z wielką precyzją, udokumentowane wydrukiem coprzekłada się na "
+" udzielaną przez nas gwarancję 12 miesięcy."
 
 #: .\templates\contact.html:93
 msgid "Диагностика, обслуживание и восстановление дизельных составляющих"
@@ -1408,7 +1402,7 @@ msgstr ""
 "Dostawa odbywa się według taryfy firmy transportowej, którą wybierasz na "
 "koszt klienta. Czas dostawy zależy od pożądanego produktu. Sprawdź status "
 "interesującego Cię produktu na jego stronie internetowej. Brak wysyłki "
-"towaru w święta. Możesz odebrać towar sam w Wolanowska 135B, 26-601 Radom, "
+"towaru w święta. Możesz odebrać towar sam w 26-601 RADOM UL.WOLANOWSKA 135B, "
 "Polska"
 
 #: .\templates\contact.html:198
@@ -1605,9 +1599,7 @@ msgstr ""
 "towaru ponosi konsument"
 
 #: .\templates\contact.html:244
-#, fuzzy
-#| msgid ""
-#| " 3.Возврат средств наступит в течении 14 дней с дня получения товара."
+
 msgid "3. 3.Возврат средств наступит в течении 14 дней с дня получения товара."
 msgstr "3. Zwrot pieniędzy nastąpi w ciągu 14 dni od daty otrzymania towaru."
 
@@ -1622,7 +1614,7 @@ msgstr ""
 "transportowa."
 
 #: .\templates\contact.html:247
-msgid "Образец формы возврата"
+msgid "Образец формы вывода"
 msgstr "Przykładowy formularz odstąpienia od umowy"
 
 #: .\templates\contact.html:261
@@ -1645,13 +1637,13 @@ msgstr "Zadzwoń do nas"
 #: .\templates\order.html:70 .\templates\product.html:192
 #: .\templates\view.html:208
 msgid "Адрес местонахождения"
-msgstr "Adres lokalizacji"
+msgstr "SIEDZIBA GŁÓWNA I WARSZTAT"
 
 #: .\templates\contact.html:330 .\templates\main.html:95
 #: .\templates\order.html:73 .\templates\product.html:195
 #: .\templates\view.html:211
 msgid "Адрес юридический"
-msgstr "Legalny adres"
+msgstr "KSIĘGOWOŚĆ"
 
 #: .\templates\contact.html:332 .\templates\main.html:97
 #: .\templates\order.html:75 .\templates\product.html:197
@@ -1674,8 +1666,8 @@ msgstr "Płatność gotówką przy odbiorze"
 #: .\templates\contact.html:343 .\templates\main.html:108
 #: .\templates\order.html:86 .\templates\product.html:208
 #: .\templates\view.html:224
-msgid "Телефон"
-msgstr "Telefon"
+msgid "Phone"
+msgstr ""
 
 #: .\templates\contact.html:350 .\templates\main.html:115
 #: .\templates\order.html:93 .\templates\product.html:215
@@ -1914,11 +1906,6 @@ msgstr "Powrót do wyszukiwania"
 msgid "Описание"
 msgstr "Opis"
 
-#: .\templates\product.html:109
-#, fuzzy
-#| msgid "Цена:"
-msgid "Цена: "
-msgstr "Cena:"
 
 #: .\templates\product.html:112
 msgid "Всего в наличии:"
