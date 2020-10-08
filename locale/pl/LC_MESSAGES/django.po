@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-08 18:19+0300\n"
+"POT-Creation-Date: 2020-10-08 19:49+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1317,12 +1317,14 @@ msgid ""
 "Предварительная калькуляция ремонта. Ремонт по желанию клиента. Оплата по "
 "окончанию ремонта."
 msgstr ""
-"LEVADADIESEL PL sp.z o.o. zapewnia pełen zakres usług w zakresie naprawy układów paliwowych w silnikach"
-" diesla. Nasza firma specjalizuje się w regeneracji wtryskiwaczy oraz pomp wtryskowych układu paliwowego"
-" wszystkich producentów. Wieloletnie doświadczenie i wiedza sprawiły, że świadczymy usługi na najwyższym"
-" poziomie co potwierdzić mogą nasi zadowoleni klienci. Dzięki zapleczu maszynowemu najwyższej jakości firmy"
-" BOSCH naprawy przez nas wykonywane są z wielką precyzją, udokumentowane wydrukiem coprzekłada się na "
-" udzielaną przez nas gwarancję 12 miesięcy."
+"LEVADADIESEL PL sp.z o.o. zapewnia pełen zakres usług w zakresie naprawy "
+"układów paliwowych w silnikach diesla. Nasza firma specjalizuje się w "
+"regeneracji wtryskiwaczy oraz pomp wtryskowych układu paliwowego wszystkich "
+"producentów. Wieloletnie doświadczenie i wiedza sprawiły, że świadczymy "
+"usługi na najwyższym poziomie co potwierdzić mogą nasi zadowoleni klienci. "
+"Dzięki zapleczu maszynowemu najwyższej jakości firmy BOSCH naprawy przez nas "
+"wykonywane są z wielką precyzją, udokumentowane wydrukiem coprzekłada się "
+"na  udzielaną przez nas gwarancję 12 miesięcy."
 
 #: .\templates\contact.html:93
 msgid "Диагностика, обслуживание и восстановление дизельных составляющих"
@@ -1599,7 +1601,6 @@ msgstr ""
 "towaru ponosi konsument"
 
 #: .\templates\contact.html:244
-
 msgid "3. 3.Возврат средств наступит в течении 14 дней с дня получения товара."
 msgstr "3. Zwrot pieniędzy nastąpi w ciągu 14 dni od daty otrzymania towaru."
 
@@ -1906,6 +1907,9 @@ msgstr "Powrót do wyszukiwania"
 msgid "Описание"
 msgstr "Opis"
 
+#: .\templates\product.html:109
+msgid "Цена: "
+msgstr "Cena: "
 
 #: .\templates\product.html:112
 msgid "Всего в наличии:"
