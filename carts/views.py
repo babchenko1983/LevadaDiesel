@@ -12,6 +12,7 @@ def view(request):
         the_id = None
     if the_id:
         print("ok")
+
         new_total = 0.00
         for item in cart.cartitem_set.all():
             line_total = float(item.product.price) * item.quantity
@@ -22,6 +23,7 @@ def view(request):
         cart.total = new_total
         cart.save()
         context = {'cart': cart}
+
     else:
         context = {"empty": True, }
     return render(request, 'view.html', context)

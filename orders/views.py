@@ -1,7 +1,8 @@
 from django.shortcuts import render
-from .models import OrderItem
 from .forms import OrderCreateForm
 from carts.views import Cart
+from send_email.views import index2
+from .models import OrderItem
 
 
 def order_create(request):
@@ -11,6 +12,12 @@ def order_create(request):
         form = OrderCreateForm(request.POST)
         if form.is_valid():
             order = form.save()
+            if order.delivery == 'dhl or dpd':
+                cart.total+=20
+            elif order.delivery == 'europe':
+                cart.total+=40
+                cart.save()
+            index2(request)
             for item in cart.cartitem_set.all():
                 OrderItem.objects.create(order=order,
                                          product=item.product,
@@ -19,9 +26,11 @@ def order_create(request):
                                          total_price=cart.total)
 
             a = int(OrderItem.objects.all().last().total_price)
+            b = order.payment == 'Visa, Master Card'
 
             return render(request, 'order.html',
                           {'order': order, 'a': a,
+                           "b":b,
                            })
         else:
             form = OrderCreateForm
@@ -30,11 +39,11 @@ def order_create(request):
 
 
 
+
     else:
         form = OrderCreateForm
         return render(request, 'checkout.html',
                       {'cart': cart, 'form': form})
-
 
 
 def back(request):

@@ -5,6 +5,18 @@ STATUS_CHOICES = (
     ("Started", "Started"),
     ("Finished", "Finished"),)
 
+DELIVERY_CHOISES = (
+    ('self', 'Самовывоз'),
+    ('dhl or dpd', 'Доставка по Польше +20 Zl.'),
+    ('europe','Доставка по Европе +40 Zl.')
+)
+
+PAYMENT = (
+    ("cash", 'Наличные'),
+    ('Cash on delivery', 'Наложеный платеж'),
+    ('Visa, Master Card', 'Visa, Master Card')
+)
+
 
 class Order(models.Model):
     status = models.CharField(max_length=100, choices=STATUS_CHOICES, default="Started")
@@ -14,11 +26,11 @@ class Order(models.Model):
     email = models.EmailField()
     postal_code = models.CharField(max_length=20)
     address = models.CharField(max_length=250)
-    delivery=models.CharField(max_length=100)
-    privacy=models.BooleanField(default=True)
+    delivery = models.CharField(max_length=100, choices=DELIVERY_CHOISES)
+    payment = models.CharField(max_length=100, choices=PAYMENT)
+    privacy = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
-
 
     class Meta:
         ordering = ('-created',)
@@ -29,7 +41,6 @@ class Order(models.Model):
         return 'Order {}'.format(self.id)
 
 
-
 class OrderItem(models.Model):
     order = models.ForeignKey(Order, related_name='items', on_delete=models.CASCADE)
     product = models.ForeignKey(Product, related_name='order_items', on_delete=models.CASCADE)
@@ -37,10 +48,5 @@ class OrderItem(models.Model):
     quantity = models.PositiveIntegerField(default=1)
     total_price = models.DecimalField(max_digits=10, decimal_places=2)
 
-
     def __str__(self):
         return '{}'.format(self.id)
-
-
-
-

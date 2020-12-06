@@ -2,6 +2,8 @@ from django.db import models
 from web.models import Product
 
 
+
+
 class CartItem(models.Model):
     cart = models.ForeignKey('Cart', null=True, blank=True, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)

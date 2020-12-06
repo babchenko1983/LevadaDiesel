@@ -141,6 +141,7 @@
                     </td>
                 </tr>
                 </tbody>
+
             {% endfor %}
 
             <tfoot>
@@ -150,8 +151,11 @@
                 <td><a href="{% url 'shop' %}"
                        class="btn btn-warning btn-lg mb-2 ml-3">{% trans 'Вернуться в магазин' %}</a></td>
                 <td colspan="2" class="hidden-xs"></td>
-                <td class="hidden-xs text-center"><strong><h4>{% trans 'Итого: ' %} {{ cart.total }} zł</h4></strong>
+
+                <td class="hidden-xs text-center"><strong><h4>{% trans 'Итого: ' %} {{ cart.total }} zł</h4>
+                </strong>
                 </td>
+
                 <td><a href="{% url 'checkout' %}" class="btn btn-success btn-lg mb-2 ml-3">{% trans 'Оформить' %}</a>
                 </td>
             </tr>
@@ -206,10 +210,10 @@
               <h3>LEVADADIESEL PL Sp. z o.o </h3>
               <p>
                   <strong>{% trans 'Адрес местонахождения'%}</strong>
-                  <p>26-601 RADOM, UL.WOLANOWSKA 135B, Polska<br>
+                  <p>Wolanowska 135B, 26-601 Radom, Polska<br>
                      <p>
                 <strong>{% trans 'Адрес юридический'%}</strong>
-                  <p>37-300 LEŻAJSK, UL.TOMASZA MICHAŁKA 33, Polska  NIP: 8161703308
+                  <p>Tomasza Michalka 33, 37-300 Leżajsk, Polska  NIP: 8161703308
                 <p><strong>{% trans 'Телефон'%}:</strong> +48888315230<br>
                 <strong>Email:</strong>  levadadieselpl@gmail.com<br>
               </p>
@@ -218,8 +222,10 @@
             <div class="col-lg-4 col-md-6">
             <div class="footer-info" data-aos="fade-up" data-aos-delay="50">
               <h3>{% trans 'Оплата' %} </h3>
-              <p>1. {% trans 'Оплата наложенным платежом' %}<br>
-                2.  <img class="img-fluid" src="{% static 'Mastercard-Rebrand-Logo.jpg' %}"><img class="img-fluid" src="{% static 'VISA_Logo.svg.png' %}"><br><br>
+            <p>1. {% trans 'Оплата наложенным платежом' %}<br>
+                  <p>2. {% trans ' Оплата при доставке' %}<br>
+                <p><br>
+                3.  <img class="img-fluid" src="{% static 'Mastercard-Rebrand-Logo.jpg' %}"><img class="img-fluid" src="{% static 'VISA_Logo.svg.png' %}"><br><br>
 
                 <strong>{% trans 'Phone'%}:</strong> +48888315230<br>
 
@@ -240,15 +246,9 @@
             <h4>{% trans 'Наш сервис' %}</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a>{% trans 'Продажа' %}</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a>{% trans 'Восстановление' %}</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a>{% trans 'Гарантия' %}</a></li>
               <li><i class="bx bx-chevron-right"></i> <a>{% trans 'Ремонт' %}</a></li>
             </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-newsletter" data-aos="fade-up" data-aos-delay="350">
-            <h4>{% trans 'О нас' %}</h4>
-            <p>{% trans 'Мы предлагаем восстановленные форсунки Common Rail, насос-форсунки UIS / PDE и механические форсунки.Форсунки восстанавливаются исключительно с использованием оригинальных запасных частей.' %}</p>
-
           </div>
 
         </div>

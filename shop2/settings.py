@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'carts',
     'orders',
+    'send_email',
 ]
 
 MIDDLEWARE = [
@@ -128,3 +129,11 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'web/static')
 STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'web/pictures')
 MEDIA_URL = '/pictures/'
+
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'babchenko1983@gmail.com'
+EMAIL_HOST_PASSWORD = 'Igor1983!'
+EMAIL_USE_TLS = True
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

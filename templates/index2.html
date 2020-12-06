@@ -1,0 +1,36 @@
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Potwierdzenie</title>
+</head>
+<body>
+<div><h3>Witaj,
+    otrzymaliśmy Twoje zamówienie złożone w sklepie LEVADADIESEL – bardzo
+    dziękujemy. Poniżej przesyłamy informacje dotyczące zamówienia.</h3></div>
+<h2>Twoje zamówienie:</h2>
+
+{% for item in content %}
+    <li class="list-group-item d-flex justify-content-between lh-condensed">
+
+    <div>
+        <h2 class="my-0">{{ item.product.name }} {{ item.product.number }}
+            &emsp; &emsp; {{ item.quantity }} szt.&emsp;x&emsp;{{ item.product.price }} Zl. </h2>
+
+    </div>
+{% endfor %}
+<h2>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Razem:&emsp; {{ cart.total }} Zl.</h2> </li>
+
+
+<h3>Wiadomość została wygenerowana automatycznie.
+    W razie jakichkolwiek pytań lub wątpliwości prosimy o kontakt telefoniczny: +48888315230 lub
+    e-mailowy: levadadieselpl@gmail.com</h3>
+
+<h3>Pozdrawiamy,
+    Zespół Obsługi Sklepu</h3>
+
+
+</body>
+</html>
